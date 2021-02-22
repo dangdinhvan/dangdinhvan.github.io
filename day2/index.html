@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Định bảng mã ký tự có trong trang web -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Lấy thông tin kích thước của cửa sổ trình duyệt-->
+    <title>Học CSS</title>
+
+    <!-- internal CSS -->
+    <style>
+        p {
+            font-weight: 700; /*font-weight hien thi do dam nhat cua chu*/
+            color: green;
+            font-size: 18px;      
+        }
+        #future {
+            font-size: 20px;
+            font-style: italic;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        .uppercase{
+            text-transform: uppercase;
+        }
+    </style>
+
+    <!-- external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- inline CSS -->
+    <h1><span style="color: red; background-color: gold">Liverpool</span> is the red</h1>
+    
+    <p id="future" class="underline uppercase">
+        tuong lai khoc hay cuoi thi phu thuoc vao do luoi cua qua khu
+    </p>
+
+    <p id="failure" class="underline">that bai la me thanh cong</p>
+
+    <p class="truyen-kieu">
+        dau long hai a to nga
+        <br />
+        thuy kieu la chi em la thuy van
+    </p>
+
+
+
+</body>
+</html>
