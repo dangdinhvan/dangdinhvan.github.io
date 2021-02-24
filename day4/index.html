@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        .color-icon{
+            color: red;
+        }
+        .font{
+            font-family: 'Ballet', cursive;
+            font-size: 30px;
+            font-weight: 700;
+            color: royalblue;
+        }
+        .size{
+            width: 200px;
+            height: 200px;
+        }
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+           
+        }
+        .blue{
+            background-color: blue;
+            
+        }
+        .general{
+            float: left;
+        }
+        .parent{
+            background-color: violet;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+        }
+        #flex{
+            clear: both;
+            padding: 20px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- font icons -->
+    <h2>font icons</h2>
+    <p>day la bieu tuong trai tim<i class="fas fa-heart color-icon"></i></p>
+    <!-- font-family -->
+    <h2>font-family</h2>
+    <p class="font">hay qua ta</p>
+    <!-- layout -->
+    <!-- float -->
+    <h2>float</h2>
+    <div class="size red general">div1</div>
+    <div class="size green general">div2</div>
+    <div class="size blue general">di3</div>
+    <!-- flex -->
+    <h2 id="flex">flex</h2>
+    <div class="parent">
+        <div class="red">div1</div>
+        <div class="child green">div2</div>
+        <div class="child blue">di3</div>
+    </div>
+</body>
+</html>
