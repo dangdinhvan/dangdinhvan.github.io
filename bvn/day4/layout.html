@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tạo layout</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .text{
+            color: white;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;  
+        }
+        .left{
+            width: 60%;
+            height: 100%;            
+        }
+        .right{
+            width: 40%;
+            height: 100%;
+        }
+        #khoi1{
+            width: 100%;
+            height: 400px;
+            display: flex;
+        }
+        .phai{
+            width: 100%;
+            height: 50%;
+        }
+        #khoi2{
+            clear: both;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            margin-top: 20px;
+        }
+        .space{
+            width: 15px;
+            height: 100%;
+        }
+        #khoi3{
+            clear: both;
+            margin-top: 20px;
+            width: 100%;
+            height: 400px;
+            display: flex;
+        }
+        .ngang{
+            width: 33.3%;
+            height: 100%;
+        }
+        #khoi4{
+            clear: both;
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="khoi1">
+        <div class="left red text">400px</div>
+        <div class="right">
+            <div class="phai green text">200px</div>
+            <div class="phai blue text">200px</div>
+        </div>
+    </div>
+    <div id="khoi2">
+        <div class="left red text">400px</div>
+        <div class="space"></div>
+        <div class="right">
+            <div class="phai green text">200px</div>
+            <div class="phai blue text">200px</div>
+        </div>
+    </div>
+    <div id="khoi3">
+        <div class="ngang red text">400px</div>
+        <div class="ngang green text">400px</div>
+        <div class="ngang blue text">400px</div>
+    </div>
+    <div id="khoi4">
+        <div class="ngang red text">400px</div>
+        <div class="space"></div>
+        <div class="ngang green text">400px</div>
+        <div class="space"></div>
+        <div class="ngang blue text">400px</div>
+    </div>
+</body>
+</html>
