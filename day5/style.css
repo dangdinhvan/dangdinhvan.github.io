@@ -134,6 +134,8 @@
     width: 100%;
     height: 100%;
     object-fit: fill;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px gray;
 }
 .right{
     height: 100%;
@@ -226,7 +228,7 @@
 }
 /* css doan 3 */
 #content3{
-    width: 1349px;
+    width: 100%;
     height: 1101px;
     background-color: #e4f3fd;
     display: flex;
@@ -251,11 +253,11 @@
 }
 .item-content3{
     background-color: white;
-    width: 387px;
+    width: 380px;
     height: 417px;
-    margin: 15px;
+    margin: 20px;
     border-radius: 6px;
-    box-shadow: 2px 2px 4px grey;
+    box-shadow: 1px 1px 4px grey;
 }
 .item-content3 img{
     width: 100%;
@@ -343,7 +345,10 @@
 .main-video{
     width: 1260px;
     height: 728px;
-    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* footer */
 #footer{
@@ -371,6 +376,7 @@
     font-weight: 600;
     font-size: 19px;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 .line-down-footer a{
     color: grey;
@@ -385,6 +391,7 @@
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .icon{
     display: flex;
     justify-content: flex-start;
@@ -392,3 +399,21 @@
     margin: 10px;
     color: grey;
 }
+
+.up-to-top{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    bottom: 20px;
+    background-color:tomato;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    margin-bottom: 80px;
+}
+

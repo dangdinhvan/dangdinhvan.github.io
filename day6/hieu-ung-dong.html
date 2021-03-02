@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hieu ung dong</title>
+    <style>
+        .rect{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: all;
+            transition: all 2s ease 0.1s;
+        }
+
+        .rect:hover{
+            border-radius: 50px;
+            background-color: royalblue;
+        }
+        .button{
+            padding: 10px 5px;
+            font-size: 20px;
+            background-color: saddlebrown;
+            color: white;
+            margin-top: 20px;
+            width: 100px;
+            height: 50px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 2s ease-out 0.5s;
+        }
+        .button:hover{
+            background-color: red;
+            border-radius: 35px;
+        }
+
+        .rect1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 20px;
+            transition: all 2s ease 0.1s;
+        }
+        .rect1:hover{
+            opacity: 0.1;
+            transform: scale(1.1);
+            /* dich sang phai 20px */
+            transform: translate(20px, 0);
+            /* xoay 1 goc n deg */
+            transform: rotate(45deg); 
+        }
+
+        .rect2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 30px;
+            animation: rotation 2s 10 alternate;
+           
+        }
+        
+        @keyframes change-color{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: seagreen;
+            }
+        }
+        @keyframes rotation{
+            20%{
+                transform: rotate(72deg);
+            }
+            40%{
+                transform: rotate(120deg);
+            }
+            60%{
+                transform: rotate(210deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rect"></div>
+    <div class="button">Login</div>
+
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+</body>
+</html>

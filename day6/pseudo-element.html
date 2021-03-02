@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo element</title>
+    <style>
+        #doan-van::first-letter{
+            color: red;
+            font-size: 24px;
+        }
+        #doan-van::first-line{
+            font-style: italic;
+        }
+        #doan-van::selection{
+            background-color: yellow;
+        }
+        #doan-van::before{
+            content:url(https://wallpaperaccess.com/full/1338488.jpg);
+        }
+    </style>
+</head>
+<body>
+    <p id="doan-van">
+        Báo Mới là một trang web tổng hợp tin tức tự động từ ~100 báo điện tử ở Việt Nam. Trong đó có các nguồn báo nổi tiếng như: thanhnien.vn, tienphong.vn, vov.vn, vtc.vn và còn rất nhiều tờ báo khác... Ngày 21/12/2019, Google đã loại bỏ Báo Mới ra khỏi tất cả kết quả tìm kiếm.
+    </p>
+</body>
+</html>
