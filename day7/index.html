@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form va table</title>
+</head>
+<body>
+    <!-- form -->
+    <form action="#" method="POST">
+        <label for="username">Họ và tên:</label>
+        <input id="username" type="text" placeholder="text here..." name="username" required>
+        <br /> <br />
+        <label for="password">Mật khẩu</label>
+        <input id="password" type="password" name="password" required>
+        <br /> <br />
+        <label for="">Giới tính</label>
+        <input id="male" type="radio" name="gender" value="male"><label for="male">Nam</label>
+        <input id="female" type="radio" name="gender" value="female"><label for="female">Nữ</label>
+        <input id="other" type="radio" name="gender" value="other"><label for="other">Khác</label>
+        <br /> <br />
+        <label for="">Sở thích</label>
+        <input id="book" type="checkbox" name="favorites" value="book"><label for="book">Đọc sách</label>
+        <input id="music" type="checkbox" name="favorites" value="music"><label for="music">Nghe nhạc</label>
+        <input id="swimming" type="checkbox" name="favorites" value="swimming"><label for="swimming">Bơi lội</label>
+        <br /> <br />
+        <label for="">Thành phố:</label>
+        <select name="country" id="conntry">
+            <option value="ha-noi">Hà Nội</option>
+            <option value="hue">Huế</option>
+            <option value="da-nang">Đà Nẵng</option>
+        </select>
+        <br /><br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form> 
+</body>
+</html>
