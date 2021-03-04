@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        #container{
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border-style: groove;;
+        }
+        form{
+            width: 400px;
+            height: 500px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #username{
+            width: 90%;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            border-style: groove;
+            border-width: 1px;
+        }
+        #password{
+            width: 90%;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            border-style: groove;
+            border-width: 1px;
+        }
+        #login{
+            background-color: blue;
+            width: 90%;
+            height: 50px;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+        #forget-password{
+            margin: 10px 0px;
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        #line{
+            border-width: 0.1px;
+            width: 90%;
+            height: 0px;
+            border-style: solid;
+        }
+        #new-account{
+            width: 55%;
+            height: 40px;
+            background-color: green;
+            border-radius: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="#" method="POST">
+            <input id="username" type="text" placeholder="Email hoặc số điện thoại" name="username">
+            <br />
+            <input id="password" type="password" placeholder="Mật khẩu" name="password">
+            <br />
+            <button id="login" type="submit">Đăng nhập</button>
+            <a id="forget-password" href="https://www.facebook.com/recover/initiate/?ars=facebook_login&privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjE0NzQzODc0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D" target="_self">Quên mật khẩu</a>
+            <div id="line"></div>
+            <a id="new-account">
+                Tạo tài khoản mới
+             </a>   
+        </form>
+    </div>
+</body>
+</html>
