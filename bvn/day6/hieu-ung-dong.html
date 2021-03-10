@@ -68,128 +68,30 @@
             }
         }
         #text{
-            width: 103px;
-            height: 103px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            text-transform: uppercase;
+            line-height: 1.5;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center ;
-            position: relative;
-            margin-bottom: 100px;
-        }
-        #text p{
-            font-size: 30px;
+            font-size: 40px;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 600;
-            color: rgb(85, 79, 79);   
+            color: grey;
         }
-        .learning{
+        .word::after{
+            content: "learning";
             background-color: green;
-            width: fit-content;
-            height: 33px;
-            font-size: 30px;
-            font-family: Arial, Helvetica, sans-serif;
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            animation: animated 3s infinite;
         }
-        .coding{
-            background-color:orange;
-            width: fit-content;
-            height: 33px;
-            font-size: 30px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .teaching{
-            background-color:rebeccapurple;
-            width: fit-content;
-            height: 33px;
-            font-size: 30px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .learning, .coding, .teaching{
-            position: absolute;
-            margin: 35px 0px;
-            animation-fill-mode: none;
-        }
-        .learning{
-            animation: transform1 2s infinite ease ;
-        }
-        .coding{
-            animation: transform2 2s infinite ease ;
-        }
-        .teaching{
-            animation: transform3 2s infinite ease ;
-        }
-        @keyframes transform1{
-            0%{
-                width: fit-content;
-                height: fit-content;
-                font-size: 30px;
-            }
-            33%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-            66%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-        }
-        @keyframes transform2{
-            0%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-            33%{
-                width: fit-content;
-                height: fit-content;
-                font-size: 30px;
-            }
-            66%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-        }
-        @keyframes transform3{
-            0%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-            33%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-            66%{
-                width: fit-content;
-                height: fit-content;
-                font-size: 30px;
-            }
-            100%{
-                width: 0%;
-                height: 0%;
-                font-size: 0;
-            }
-        }
+       @keyframes animated{
+           33%{
+               content: "coding";
+               background-color: orange;
+           }
+           66%{
+               content: "teaching";
+               background-color: purple;
+           }
+       }
     </style>
 </head>
 <body>
@@ -211,11 +113,9 @@
         </div>
 
         <div id="text">
-            <p>START</p>
-            <div class="teaching">TEACHING</div>
-            <div class="coding">CODING</div>
-            <div class="learning">LEARNING</div>
-            <p>TODAY</p>
+            <div class="start">start</div>
+            <div class="word"></div>
+            <div class="today">today</div>
         </div>
     </div>
 </body>
