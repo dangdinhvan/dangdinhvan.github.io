@@ -38,5 +38,5 @@ let eur = VNDtoEUR(100000);
 function tinhTheKy(year){
     return Math.ceil(year/100);
 }
-let theki = tinhTheKy(2021);
+let theki = tinhTheKy(1900);
 alert(`nam ban nhap thuoc the ky ${theki}`);
