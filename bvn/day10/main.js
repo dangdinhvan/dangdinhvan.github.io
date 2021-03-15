@@ -20,8 +20,8 @@ function date_time() {
 
 //  bt2: Xác định số ngày trong 1 tháng
 function daysOfMonth(m, y) {
-    if (m < 1 || m > 12) {
-        return "tháng nhập không hợp lệ";
+    if (m < 1 || m > 12 || y < 1) {
+        return "dữ liệu nhập không hợp lệ";
     }
     if (m === 1 || m === 3 || m === 5 || m === 7 || m === 8 || m === 10 || m === 12) {
         console.log("tháng " + m + ", năm " + y + " có 31 ngày.");
@@ -42,11 +42,11 @@ function sumOfPositiveInterger(a) {
     if (a <= 0) {
         return "so nhap vao khong hop le";
     }
-    let s=0;
-    while(a>0){
-        let sotachra=a%10;
-        s+=sotachra;
-        a=Math.floor(a/10);
+    let s = 0;
+    while (a > 0) {
+        let sotachra = a % 10;
+        s += sotachra;
+        a = Math.floor(a / 10);
     }
     return s;
 }
@@ -78,10 +78,36 @@ function translate(language) {
         case "Italy":
             console.log("Ciao");
             break;
-        case "Hawaiian":
-            console.log("Croatia");
+        case "Croatia":
+            console.log("zdravo");
             break;
         default:
             console.log("Xin chào");
     }
+}
+
+// bt6: kiểm tra số nguyên tố
+function soNguyenTo(a) {
+    if (a < 2) {
+        return `${a} k phai la so nguyen to`;
+    }
+    for (let i = 2; i <= a / 2; i++) {
+        if (a % i === 0) {
+           return `${a} k phai so nguyen to`;
+        }
+    }
+    console.log(`${a} la so nguyen to`);
+    return true;
+}
+
+// bt7: dem va liet ke cac so nguyen to nho hon hoac bang x
+function demSoNguyenTo(x) {
+    let dem=0;
+    for(let i=0;i<=x;i++){
+        if(soNguyenTo(i)==true){
+            console.log(i);
+            dem++;
+        }
+    }
+    return dem;
 }
