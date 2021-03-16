@@ -11,7 +11,7 @@ for(let i=0;i<names.length;i++){
 }
 
 for(let item of names){
-    console.log(item);// in ra cac phaan tu
+    console.log(item);// in ra cac phan tu
 }
 
 for(let index in names){
