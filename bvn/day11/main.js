@@ -12,7 +12,7 @@ function kiemTraSoHoanHao(a) {
     return false;
 }
 function inSoHoanHao(n) {
-    for (let i = 6; i < n; i++) {
+    for (let i = 2; i < n; i++) {
         if (kiemTraSoHoanHao(i) == true) {
             console.log(i);
         }
@@ -86,3 +86,18 @@ function inDaoNguoc(str) {
     return newStr;
 }
 
+// bt: Tính n! với n là số tu nhien
+function tinhGiaiThua(n) {
+    let giai_thua = 1;
+    if (n < 0 || Number.isInteger(n)===false){
+        return "so nhap vao khong hop le";
+    }
+    if (n === 0) {
+        return giai_thua;
+    }
+    else
+        for (let i = 1; i <= n; i++) {
+            giai_thua *= i;
+        }
+    return giai_thua;
+}
