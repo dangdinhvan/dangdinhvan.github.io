@@ -77,6 +77,10 @@ document.write("<br />");
 document.write("bài 4: Vẽ tam giác vuông cân cạnh m");
 document.write("<br />");
 function drawRightTriangle(m) {
+    if (m <= 0 || Number.isInteger(m) === false) {
+        document.write("Thong so dau vao khong hop le");
+        return;
+    }
     for (let i = 0; i < m; i++) {
         for (let j = 0; j <= i; j++) {
             document.write(" * ");
@@ -91,12 +95,16 @@ document.write("<br />");
 document.write("bài 5: Vẽ tam giác cân ngược với chiều cao h");
 document.write("<br />");
 function drawTamGiacCanNguoc(h) {
+    if (h <= 0 || Number.isInteger(h) === false) {
+        document.write("Thong so dau vao khong hop le");
+        return;
+    }
     for (let i = 0; i < 2 * h - 1; i += 2) {
         for (let j = 0; j < 2 * h - 1 - i; j++) {
            document.write(" * ");
         }
         document.write("<br />");                                  
-        for (let k=-1;k<i/2;k++) {
+        for (let k=0;k<=i/2;k++) {
           document.write(" * ".fontcolor("white"));
         }
     }
