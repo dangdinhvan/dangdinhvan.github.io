@@ -58,8 +58,8 @@ function kiemTraSoDoiXung(n) {
 }
 
 // bt5: Viết chương trình tính tiền cước TAXI
-function tinhTienCuocTaxi(s) {
-    if (s < 0) {
+function tinhTienCuocTaxi(s, t) {
+    if (s < 0 || t < 0) {
         return "thong so nhap vao khong hop le";
     }
     let tien;
@@ -72,5 +72,8 @@ function tinhTienCuocTaxi(s) {
     else {
         tien = 9000 + 11000 * 29 + 9500 * (s - 30);
     }
-    console.log("Giá cước taxi cho "+s+" km là "+tien+" VND");
+    if (t !== 0) {
+        tien += (20000 * t);
+    }
+    console.log("Giá cước taxi cho " + s + " km và chờ " + t + " tiếng" + " là " + tien + " VND");
 }

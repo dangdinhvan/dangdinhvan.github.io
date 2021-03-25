@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả xổ số miền Bắc</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            padding: 5px;
+        }
+
+        p {
+            margin: 0px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container {
+            width: 350px;
+            height: fit-content;
+            background-color: lightskyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            line-height: 1.5;
+        }
+
+        #number {
+            padding: 3px;
+        }
+
+        #number:focus {
+            outline: none;
+        }
+
+        #click {
+            width: 50px;
+            padding: 3px;
+        }
+
+        .input {
+            margin: 10px 0px;
+        }
+
+        #reset {
+            padding: 3px;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Guess!</h1>
+        <p>Bạn có 10 lượt dự đoán</p>
+        <p>Khoảng giá trị bạn có thể đoán từ 0 đến 100</p>
+        <div class="input">
+            <input id="number" type="number">
+            <button id="click" onclick="pressOnClick()">Guest</button>
+        </div>
+        <p id="alert"></p>
+        <div class="action">
+            <p id="result"></p>
+        </div>
+        <div id="reset">
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script src="./random.js"></script>
+</body>
+
+</html>
