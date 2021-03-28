@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy đổi tiền tệ</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            width: 350px;
+            margin-top: 50px;
+            padding: 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(235, 235, 107);
+        }
+
+        #content {
+            width: 290px;
+        }
+
+        #change {
+            padding: 5px;
+        }
+
+        .convert {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            margin: 5px 0px;
+        }
+
+        .text {
+            width: 90px;
+            height: 29;
+            padding: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        #moneyInput {
+            padding: 5px;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #output {
+            width: 183px;
+            height: 29px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            font-size: 14px;
+        }
+        #from{
+            width: 183px;
+            outline: none;
+            padding: 3px;
+        }
+        #to{
+            width: 183px;
+            outline: none;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Quy đổi mọi loại tiền</h1>
+        <div id="content">
+            <div class="convert">
+                <div class="text">Từ</div>
+                <select name="from" id="from">
+                    <option value="USD">Đô-la Mỹ - USD</option>
+                    <option value="EUR">Euro - EUR</option>
+                    <option value="VND">Việt Nam Đồng - VND</option>
+                </select>
+            </div>
+            <div class="convert">
+                <div class="text">Sang</div>
+                <select name="to" id="to">
+                    <option value="VND">Việt Nam Đồng - VND</option>
+                    <option value="USD">Đô-la Mỹ - USD</option>
+                    <option value="EUR">Euro - EUR</option>
+                </select>
+            </div>
+            <div class="convert">
+                <div class="text">Số lượng</div>
+                <input id="moneyInput" type="number">
+            </div>
+            <div class="convert">
+                <div class="text">Thành tiền</div>
+                <p id="output"></p>
+            </div>
+        </div>
+
+        <button id="change" onclick="quyDoiTienTe()">Quy đổi</button>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

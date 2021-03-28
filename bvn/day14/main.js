@@ -8,8 +8,8 @@ function changeColor() {
     para3.style.color="red";
 }
 
-function changeBackgroundColor(color){
-    document.body.style.backgroundColor=color;
+function changeBackgroundColor(){
+    document.body.style.backgroundColor="green";
 }
 
 function copyContent(a,b){
@@ -26,4 +26,13 @@ function changeFontSize(x){
     para2.style.fontSize=x+"px";
     para3.style.fontSize=x+"px";
     return true;
+}
+
+function increaseFontSize(paragraphID){
+    let a=window.getComputedStyle(para1).getPropertyValue("font-size");
+    if(paragraphID="paragrap1"){
+        para1.style.fontSize;
+    }
+    console.log(a);
+
 }
