@@ -1,40 +1,51 @@
-//  b1: tinh tong giua ha so nguyen
+//  b1: tinh tong giua hai so nguyen
 function tinhTongGiuaHaiSoNguyen(a, b) {
     let sum = 0;
     if (Number.isInteger(a) === false || Number.isInteger(b) === false) {
         return "thong so nhap vao khong hop le";
     }
-    for (i = a + 1; i < b; i++) {
-        sum += i;
+    if (a < b) {
+        for (let i = a + 1; i < b; i++) {
+            sum += i;
+        }
+        console.log(`Tổng giữa hai sô nguyên ${a} và ${b} là ${sum}`);
     }
-    console.log(`Tổng giữa hai sô nguyên ${a} và ${b} là ${sum}`);
+    if (a > b) {
+        for (let j = b + 1; j < a; j++) {
+            sum += j;
+        }
+        console.log(`Tổng giữa hai sô nguyên ${b} và ${a} là ${sum}`);
+    }
 }
 
 // b2: chuyen 1 chuoi ve dang spinal case
 function changeSpinalCase(str) {
-    let newStr="";
-    let a;
-    for(let i=0;i<str.length;i++){
-        newStr= str.substr(i,1).tolowercase();
-    }
-    return newStr;
+    let newStr = str.toLowerCase().split(" ").join("-");
+    console.log(newStr);
 }
 
 // b3: tinh thoi gian sau x giay
 function countTime(t, x) {
-    let s = Number.parseInt(t.substr(t.length - 2, 2));
-    let newt = t.substr(0, t.length - 2) + (s + x);
-    return newt;
+    let gio = Number(t.substring(0, 2));
+    let phut = Number(t.substring(3, 5));
+    let giay = Number(t.substring(6, 8));
+    let temp = gio * 3600 + phut * 60 + giay + x;
+    let newGio = Math.floor(temp / 3600);
+    let newPhut = Math.floor((temp % 3600) / 60);
+    let newGiay = Math.floor((temp % 3600) % 60);
+    while (newGio >= 24) {
+        newGio = newGio - 24;
+    }
+    console.log(`Thời gian mới là ${newGio}:${newPhut}:${newGiay}`);
 }
 
 // b4: tinh thoi gian oc sen leo len mieng gieng
 function tinhThoiGianOcSen(h, x, y) {
     if (h <= 0 || x <= y || y <= 0) {
-        return "thong so nhap vao khong hop le";
+        return "ốc sên không bao giờ leo lên được miệng giếng";
     }
-    
-    let thoiGian = h / (x - y);
-    console.log(`thời gian ốc sên leo lên đến miệng giếng có độ cao ${h} là ${thoiGian} ngày`);
+    let thoiGian = Math.ceil(h / (x - y));
+    console.log(`thời gian ốc sên leo lên đến miệng giếng có độ cao ${h}m là ${thoiGian} ngày`);
 }
 
 // b5: sap xep cac chu so de ra so nho nhat
@@ -48,16 +59,32 @@ function changeToMin(a) {
         arr.push(soTachRa);
         a = Math.floor(a / 10);
     }
-    arr.sort(function(a, b){return a - b});
-    let soMoi=0;
-    for(let i=0;i<arr.length;i++){
-        soMoi=soMoi*10+arr[i];
+    arr.sort(function (a, b) { return a - b });
+    console.log(arr);
+    let temp;
+    if (arr[0] === 0) {
+        for (let j = 1; j < arr.length; j++) {
+            if (arr[j] !== 0) {
+                temp = arr[j];
+                arr[j] = arr[0];
+                arr[0] = temp;
+                break;
+            }
+        }
+    }
+    let soMoi = 0;
+    for (let i = 0; i < arr.length; i++) {
+        soMoi = soMoi * 10 + arr[i];
     }
     return soMoi;
 }
 
 // b6: thay doi mau nen trang html
 function changeBackgroundColor() {
-    let colors = [];
-    document.body.style.backgroundColor = "" ;
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    document.body.style.backgroundColor= color;
 }
