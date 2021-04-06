@@ -30,7 +30,7 @@ cac kieu du lieu
 - null la mot bien / doi tuong no trong / k co gi
 
 5. undefined
-- mot bien/ hang so da duoc khai bao. chua duoc khoi tao thi no mang gia tra undefined
+- mot bien/ hang so da duoc khai bao. chua duoc khoi tao thi no mang gia tri undefined
 */
 
 /*

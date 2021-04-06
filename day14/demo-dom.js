@@ -2,9 +2,10 @@
 // innerHTML la noi dung cua element
 // document.getElementById("demo").innerHTML = "Xin chao cac ban. Toi la DOM";
 
-document.getElementsByClassName();
-document.getElementsByTagName();
-document.querySelector();
+document.getElementsByClassName(); //tra ve mang
+document.getElementsByTagName(); //tra ve mang
+document.querySelector(); //tra ve obj
+document.querySelectorAll(); //tra ve mang
 
 let hello = document.getElementById("demo");
 hello.innerHTML = "Hello World";

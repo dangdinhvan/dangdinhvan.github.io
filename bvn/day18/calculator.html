@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: #69839e;
+        }
+
+        #container {
+            width: 250px;
+            margin-top: 50px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            border-radius: 11px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f3f1f7fa;
+        }
+
+        h2 {
+            padding: 5px;
+            color: rgb(27, 27, 139);
+        }
+
+        #screen {
+            width: 210px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            background-color: white;
+            margin-bottom: 15px;
+        }
+
+        #screenUp {
+            height: 30px;
+            padding: 0px 5px;
+            display: flex;
+            align-items: center;
+        }
+        #screenDown {
+            height: 30px;
+            float: right;
+            padding: 0px 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .row {
+            width: 210px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            width: 41px;
+            height: 41px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            outline: none;
+        }
+        .buttonAC{
+            width: 41px;
+            height: 41px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 0, 106);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            outline: none;
+        }
+        .button-cam{
+            width: 41px;
+            height: 41px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:orange;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            outline: none;
+        }
+        .button:hover{
+            background-color: rgb(209, 208, 208);
+        }
+        .buttonAC:hover{
+            background-color: rgb(196, 0, 65);
+        }
+        .button-cam:hover{
+            background-color: rgb(209, 137, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h2>CASIO - Fx 600</h2>
+        <div id="screen">
+            <div id="screenUp"></div>
+            <div id="screenDown"></div>
+        </div>
+        <div class="row">
+            <button class="buttonAC" onclick="AC()">AC</button>
+            <button class="button" onclick="sqrt()">&radic;</button>
+            <button class="button" onclick="giaiThua()">!</button>
+            <button class="button-cam" onclick="chia()">&divide;</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="seven()">7</button>
+            <button class="button" onclick="eight()">8</button>
+            <button class="button" onclick="nine()">9</button>
+            <button class="button-cam" onclick="nhan()">&times;</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="four()">4</button>
+            <button class="button" onclick="five()">5</button>
+            <button class="button" onclick="six()">6</button>
+            <button class="button-cam" onclick="tru()">&minus;</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="one()">1</button>
+            <button class="button" onclick="two()">2</button>
+            <button class="button" onclick="three()">3</button>
+            <button class="button-cam" onclick="cong()">+</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="phanTram()">%</button>
+            <button class="button" onclick="zero()">0</button>
+            <button class="button" onclick="dauCham()">.</button>
+            <button class="button-cam" onclick="dauBang()">=</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

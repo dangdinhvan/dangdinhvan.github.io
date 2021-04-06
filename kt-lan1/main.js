@@ -41,11 +41,24 @@ function countTime(t, x) {
 
 // b4: tinh thoi gian oc sen leo len mieng gieng
 function tinhThoiGianOcSen(h, x, y) {
-    if (h <= 0 || x <= y || y <= 0) {
+    if (h <= 0 || x <= 0 || y <= 0) {
+        return "tham số nhập vào không hợp lệ";
+    }
+    else if (x <= y) {
         return "ốc sên không bao giờ leo lên được miệng giếng";
     }
-    let thoiGian = Math.ceil(h / (x - y));
-    console.log(`thời gian ốc sên leo lên đến miệng giếng có độ cao ${h}m là ${thoiGian} ngày`);
+    else if (x > h) {
+        return "ốc sên chỉ cần nửa ngày để leo lên miệng giếng";
+    }
+    else {
+        let dem = 0;
+        let doCaoConLai = h;
+        while (x <= doCaoConLai) {
+            dem++;
+            doCaoConLai = doCaoConLai - (x - y);
+        }
+        console.log(`thời gian ốc sên leo lên đến miệng giếng có độ cao ${h}m là ${dem + 1} ngày`);
+    }
 }
 
 // b5: sap xep cac chu so de ra so nho nhat
@@ -86,5 +99,6 @@ function changeBackgroundColor() {
     for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
-    document.body.style.backgroundColor= color;
+    document.getElementById("output").innerHTML = "HEX Color: " + color;
+    document.body.style.backgroundColor = color;
 }
