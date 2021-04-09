@@ -1,16 +1,17 @@
 let screenUp = document.getElementById("screenUp");
 let screenDown = document.getElementById("screenDown");
 let giaTri = "";
+screenDown.innerHTML="0";
 
 function AC() {
     screenUp.innerHTML = "";
-    screenDown.innerHTML = "";
+    screenDown.innerHTML = "0";
     giaTri = "";
 }
 
 function sqrt() {
     screenUp.innerHTML = screenUp.innerHTML + "&radic;";
-    giaTri = giaTri + "can";
+    giaTri += "can";
 }
 
 function giaiThua() {
@@ -25,21 +26,21 @@ function giaiThua() {
 
 function nhan() {
     screenUp.innerHTML = screenUp.innerHTML + "&times;";
-    giaTri = giaTri + "*";
+    giaTri += "*";
 }
 
 function chia() {
     screenUp.innerHTML = screenUp.innerHTML + "&divide;";
-    giaTri = giaTri + "/";
+    giaTri += "/";
 }
 
 function cong() {
     screenUp.innerHTML = screenUp.innerHTML + "+";
-    giaTri = giaTri + "+";
+    giaTri += "+";
 }
 function tru() {
     screenUp.innerHTML = screenUp.innerHTML + "&minus;";
-    giaTri = giaTri + "-";
+    giaTri += "-";
 }
 
 function phanTram() {
@@ -52,65 +53,13 @@ function dauBang() {
     if (giaTri.slice(0, 3) === "can") {
         giaTri = giaTri.slice(3, giaTri.length);
         let soMoi = Math.sqrt(Number(giaTri));
-        screenDown.innerHTML = String(soMoi.toLocaleString('en-US'));
+        giaTri = soMoi;
     }
-    else {
-        screenDown.innerHTML = Number(eval(giaTri)).toLocaleString('en-US');
-    }
+    screenDown.innerHTML = Number(eval(giaTri)).toLocaleString('en-US');
 }
 
-function seven() {
-    screenUp.innerHTML = screenUp.innerHTML + "7";
-    giaTri = giaTri + "7";
-}
-
-function eight() {
-    screenUp.innerHTML = screenUp.innerHTML + "8";
-    giaTri = giaTri + "8";
-}
-
-function nine() {
-    screenUp.innerHTML = screenUp.innerHTML + "9";
-    giaTri = giaTri + "9";
-}
-
-function four() {
-    screenUp.innerHTML = screenUp.innerHTML + "4";
-    giaTri = giaTri + "4";
-}
-
-function five() {
-    screenUp.innerHTML = screenUp.innerHTML + "5";
-    giaTri = giaTri + "5";
-}
-
-function six() {
-    screenUp.innerHTML = screenUp.innerHTML + "6";
-    giaTri = giaTri + "6";
-}
-
-function one() {
-    screenUp.innerHTML = screenUp.innerHTML + "1";
-    giaTri = giaTri + "1";
-}
-
-function two() {
-    screenUp.innerHTML = screenUp.innerHTML + "2";
-    giaTri = giaTri + "2";
-}
-
-function three() {
-    screenUp.innerHTML = screenUp.innerHTML + "3";
-    giaTri = giaTri + "3";
-}
-
-function zero() {
-    screenUp.innerHTML = screenUp.innerHTML + "0";
-    giaTri = giaTri + "0";
-}
-
-function dauCham() {
-    screenUp.innerHTML = screenUp.innerHTML + ".";
-    giaTri = giaTri + ".";
+function input(input) {
+    screenUp.innerHTML += input;
+    giaTri += input;
 }
 

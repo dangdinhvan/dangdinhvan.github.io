@@ -1,0 +1,106 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #243f7a;
+}
+img{
+    width: 30%;
+    margin: 20px;
+}
+#question{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+#content-question{
+    width: 70%;
+    background-color:#0b1d49;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hai-ben{
+    width: 15%;
+}
+.tren{
+    width: 100%;
+    height: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: #243f7a;
+    border-left-color: #243f7a;
+    border-right-color: #243f7a;
+    border-bottom-color: white;
+}
+.duoi{
+    width: 100%;
+    height: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-color: #243f7a;
+    border-left-color: #243f7a;
+    border-right-color: #243f7a;
+    border-top-color: white;
+}
+#answer{
+    width: 100%;
+    height: 120px;
+}
+.line{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.content-answer{
+    width: 45%;
+    background-color: #2359b6;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+    outline: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(180, 153, 0);
+}
+.space{
+    width: 12%;
+}
+#select{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px;
+}
+.button{
+    width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}

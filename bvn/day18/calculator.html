@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX////l4uHt7Ov/kkiCe3fy8fDp5uV/eHPk5eXyvaD/jj/29fX/zLH/jkD/iTGnoZ//u5b/lEx5cW11bWiVj4yloJ2sqKXU0c+2sq+QioeJgn7EwL7539L/vpr/1Lz/izj/9fD/mlb/tYr/2cT/7eP/s4Tu0sX/p2//6NoDY8+FAAADiklEQVR4nO3d61baQBhGYYIQVAyWQMBz0Nba+7/CaltqNK6uObxfzQx7/+gfMYvHTJKJE+loRERERERERERERER0mM2jm8Y1n1vqpuP4yiK6cmyjVPA0wpfGQ/XJhGrjXOUTCotiqgPKdqBWWJQqoNCnFRaFxCccoXphoTiraoFqoWAvioFyYTRReZKxEUaebsQHoYUw8qIhBxoIo8apfIyaCGNmN3qghTBiJxrsQhNh+E40AJoIg3ei/kRqJQyd2VgMUmdhWe7/cSh0mDq832mzqvetGpcfieN7Lq/Xz5tcX7u9PPSq7yLczCb7ZhudsGzqlw3P6sbt9WFAl8PQSFhu6j8brTdO3xB2IH6icNvZ6jZHYXnR2eqFy3eEzU0/Udh0tnqepfC8s1Wnc01ywu4odTrVpCb0P9MkJ3w9EN0GaXrColj/viDWa7eXJygsL66eZ21XTpeKNIVFWWy328L11SkK/UKI8ICE/VX1N8L+Gr2TsPTNUNhs3nc5ee2y99XGSdic+9UYClez90269b66chL2t/rvVobCeuJX7ST03ipChAgRIkSI0FSY/5wm/3lp/vcWfXJu94cIESLslP3vS/P/nXfu6xb5rz111g/rbY4rpPmvAR/AOn7+z2Jk/zzNITyp4PtcW3JC72cTDYXDeL7UUOifyTPCSQr9QogQIUKECBEiRIgQIUKEqQnHxxYFCr3X1x0afz+x6CZIOLUYTscn7am+xdmQhKdH+k4RIkSIECFChAgRIkSIECFChAgRIkT43MK31IRL73e2TEx4hBAhQoQIESJE+H+F3sv2LsJBzdriP/3go314+8Wv294WdML4T7D4SFj5ZiiM/xSSod8fIkSIECFChAgPYU6T/7w0/3uL+IZ+f4gQIUKECBEiRBgoPIBZW/bPYggKFM7TEbZ32QvD/sJylI5wsQsTWvxRso3wPgw4GqcirB4ChRYHoomw/RootDgQbYShQIthaiEMHqQmw9RC2H4LFhrsRANh9RgONDgSDYTtLkYon5vqhW3YnPRv6qu+XFg9xQHl41QtrJa7WKGYKBdGnEf3aS8ZWmFV/YgHjrR7USqsloI9+Cvh6UYpbJ92IqDyoqETVrGXiXepZjcqYdU+7qRAmVEirNr2QXUEvmku+Ciy45NF3EdCte3i/iH4ftBF2f9/ufy6OYvr7mZnyCMiIiIiIiIiIiIiGnA/AdkTNVDVw7pPAAAAAElFTkSuQmCC"
+        type="image/x-icon">
     <style>
         * {
             padding: 0px;
@@ -52,13 +55,16 @@
             padding: 0px 5px;
             display: flex;
             align-items: center;
+            font-size: 20px;
         }
+
         #screenDown {
             height: 30px;
             float: right;
             padding: 0px 5px;
             display: flex;
             align-items: center;
+            font-size: 20px;
         }
 
         .row {
@@ -81,8 +87,10 @@
             background-color: white;
             font-family: Arial, Helvetica, sans-serif;
             outline: none;
+            border-radius: 5px;
         }
-        .buttonAC{
+
+        .buttonAC {
             width: 41px;
             height: 41px;
             border-style: solid;
@@ -96,8 +104,10 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             outline: none;
+            border-radius: 5px;
         }
-        .button-cam{
+
+        .button-cam {
             width: 41px;
             height: 41px;
             border-style: solid;
@@ -107,18 +117,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:orange;
+            background-color: orange;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             outline: none;
+            border-radius: 5px;
         }
-        .button:hover{
+
+        .button:hover {
             background-color: rgb(209, 208, 208);
         }
-        .buttonAC:hover{
+
+        .buttonAC:hover {
             background-color: rgb(196, 0, 65);
         }
-        .button-cam:hover{
+
+        .button-cam:hover {
             background-color: rgb(209, 137, 2);
         }
     </style>
@@ -138,27 +152,27 @@
             <button class="button-cam" onclick="chia()">&divide;</button>
         </div>
         <div class="row">
-            <button class="button" onclick="seven()">7</button>
-            <button class="button" onclick="eight()">8</button>
-            <button class="button" onclick="nine()">9</button>
+            <button class="button" onclick="input('7')">7</button>
+            <button class="button" onclick="input('8')">8</button>
+            <button class="button" onclick="input('9')">9</button>
             <button class="button-cam" onclick="nhan()">&times;</button>
         </div>
         <div class="row">
-            <button class="button" onclick="four()">4</button>
-            <button class="button" onclick="five()">5</button>
-            <button class="button" onclick="six()">6</button>
+            <button class="button" onclick="input('4')">4</button>
+            <button class="button" onclick="input('5')">5</button>
+            <button class="button" onclick="input('6')">6</button>
             <button class="button-cam" onclick="tru()">&minus;</button>
         </div>
         <div class="row">
-            <button class="button" onclick="one()">1</button>
-            <button class="button" onclick="two()">2</button>
-            <button class="button" onclick="three()">3</button>
+            <button class="button" onclick="input('1')">1</button>
+            <button class="button" onclick="input('2')">2</button>
+            <button class="button" onclick="input('3')">3</button>
             <button class="button-cam" onclick="cong()">+</button>
         </div>
         <div class="row">
             <button class="button" onclick="phanTram()">%</button>
-            <button class="button" onclick="zero()">0</button>
-            <button class="button" onclick="dauCham()">.</button>
+            <button class="button" onclick="input('0')">0</button>
+            <button class="button" onclick="input('.')">.</button>
             <button class="button-cam" onclick="dauBang()">=</button>
         </div>
     </div>

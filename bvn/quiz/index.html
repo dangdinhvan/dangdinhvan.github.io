@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container">
+        <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/0/09/Vietnam_millionaire_2021.webp/1200px-Vietnam_millionaire_2021.webp.png"
+            alt="anh logo">
+        <div id="question">
+            <div class="hai-ben">
+                <div class="tren"></div>
+                <div class="duoi"></div>
+            </div>
+            <div id="content-question"></div>
+            <div class="hai-ben">
+                <div class="tren"></div>
+                <div class="duoi"></div>
+            </div>
+        </div>
+        <div id="answer">
+            <div class="line">
+                <div class="space">
+                    <div class="tren"></div>
+                    <div class="duoi"></div>
+                </div>
+                <button id="answerA" class="content-answer">A: </button>
+                <div class="space">
+                    <div class="tren"></div>
+                    <div class="duoi"></div>
+                </div>
+                <button id="answerB" class="content-answer">B: </button>
+                <div class="space">
+                    <div class="tren"></div>
+                    <div class="duoi"></div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="space">
+                    <div class="tren"></div>
+                    <div class="duoi"></div>
+                </div>
+                <button id="answerC" class="content-answer">C: </button>
+                <div class="space">
+                    <div class="tren"></div>
+                    <div class="duoi"></div>
+                </div>
+                <button id="answerD" class="content-answer">D: </button>
+                <div class="space">
+                    <div class="tren"></div>
+                    <div class="duoi"></div>
+                </div>
+            </div>
+        </div>
+        <div id="select">
+            <button id="exit" class="button">Thoát Game</button>
+            <button id="confirm" class="button">Xác nhận câu trả lời</button>
+            <button id="next" class="button">Câu kế tiếp</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
