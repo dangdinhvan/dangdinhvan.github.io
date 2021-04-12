@@ -24,18 +24,18 @@
                 <div class="duoi"></div>
             </div>
         </div>
-        <div id="answer">
+        <div id="answers">
             <div class="line">
                 <div class="space">
                     <div class="tren"></div>
                     <div class="duoi"></div>
                 </div>
-                <button id="answerA" class="content-answer">A: </button>
+                <button id="A" onclick="choice('a')" class="content-answer"></button>
                 <div class="space">
                     <div class="tren"></div>
                     <div class="duoi"></div>
                 </div>
-                <button id="answerB" class="content-answer">B: </button>
+                <button id="B" onclick="choice('b')" class="content-answer"></button>
                 <div class="space">
                     <div class="tren"></div>
                     <div class="duoi"></div>
@@ -46,12 +46,12 @@
                     <div class="tren"></div>
                     <div class="duoi"></div>
                 </div>
-                <button id="answerC" class="content-answer">C: </button>
+                <button id="C" onclick="choice('c')" class="content-answer"></button>
                 <div class="space">
                     <div class="tren"></div>
                     <div class="duoi"></div>
                 </div>
-                <button id="answerD" class="content-answer">D: </button>
+                <button id="D" onclick="choice('d')" class="content-answer"></button>
                 <div class="space">
                     <div class="tren"></div>
                     <div class="duoi"></div>
@@ -59,12 +59,15 @@
             </div>
         </div>
         <div id="select">
-            <button id="exit" class="button">Thoát Game</button>
-            <button id="confirm" class="button">Xác nhận câu trả lời</button>
-            <button id="next" class="button">Câu kế tiếp</button>
+            <button class="button" onclick="exit()">Thoát Game</button>
+            <button class="button" onclick="confrim()">Xác nhận câu trả lời</button>
+            <button class="button" onclick="next()">Câu kế tiếp</button>
         </div>
     </div>
-
+    <!-- man hinh ket thuc game -->
+    <div id="end-game">
+        <h1>Game Over</h1>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./main.js"></script>

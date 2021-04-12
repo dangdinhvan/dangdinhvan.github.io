@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .button1 {
+            width: 90px;
+            height: 30px;
+            margin: 15px;
+        }
+
+        .button2 {
+            width: 90px;
+            height: 30px;
+            margin: 15px 15px 15px 0px;
+        }
+
+        .button3 {
+            width: 90px;
+            height: 30px;
+            float: right;
+            margin: 15px;
+        }
+
+        #content {
+            height: 300px;
+            background-color: steelblue;
+            margin: 15px;
+        }
+
+        @media(max-width:600px) {
+            #header {
+                display: flex;
+                justify-content: space-between;
+                margin: 15px;
+            }
+
+            .button1 {
+                width: 60px;
+                margin: 0px;
+            }
+
+            .button2 {
+                width: 60px;
+                margin: 0px;
+            }
+
+            .button3 {
+                width: 60px;
+                margin: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <button class="button1">button 1</button>
+        <button class="button2">button 2</button>
+        <button class="button3">button 3</button>
+    </div>
+    <div id="content"></div>
+</body>
+
+</html>
