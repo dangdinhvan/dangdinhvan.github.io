@@ -5,7 +5,7 @@ let data = [
         answerB: "B: 23 tỉnh thành",
         answerC: "C: 24 tỉnh thành",
         answerD: "D: 25 tỉnh thành",
-        answer: 4,
+        answer: "D: 25 tỉnh thành"
     },
     {
         question: "Ấn Độ là quốc gia có dân số đứng thứ mấy thế giới?",
@@ -13,7 +13,7 @@ let data = [
         answerB: "B: Thứ 2",
         answerC: "C: Thứ 9",
         answerD: "D: Thứ 5",
-        answer: 2,
+        answer: "B: Thứ 2"
     },
     {
         question: "Tổng thống đời thứ 16 của Mỹ là ai?",
@@ -21,7 +21,15 @@ let data = [
         answerB: "B: John Adams",
         answerC: "C: John F. Kennedy",
         answerD: "D: Richard Nixon",
-        answer: 1,
+        answer: "A: Abraham Lincoln"
+    },
+    {
+        question: "Năm 1500 thuộc thế kỷ thứ bao nhiêu?",
+        answerA: "A: 14",
+        answerB: "B: 15",
+        answerC: "C: 16",
+        answerD: "D: 17",
+        answer: "B: 15"
     }
 ];
 
@@ -29,8 +37,8 @@ let content = [];
 // tạo câu hỏi và câu trả lời
 for (let i = 0; i < data.length; i++) {
     content.push(`<div id="container">
-    <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/0/09/Vietnam_millionaire_2021.webp/1200px-Vietnam_millionaire_2021.webp.png"
-        alt="anh logo">
+    <img src="http://streaming1.danviet.vn/upload/4-2018/images/2018-10-31/Tron-1-thang-gia-nhap-Facebook-MC-Lai-Van-Sam-noi-dieu-bat-ngo-sam6-1497289434848-1540981233-width660height396.jpg"
+        alt="anh nen">
     <div id="question">
         <div class="hai-ben">
             <div class="tren"></div>
@@ -83,44 +91,122 @@ for (let i = 0; i < data.length; i++) {
     </div>
 </div>`);
 }
-
+$('body').html(`<div id="start">
+<img src="https://upload.wikimedia.org/wikipedia/vi/thumb/0/09/Vietnam_millionaire_2021.webp/1200px-Vietnam_millionaire_2021.webp.png"
+    alt="anh logo">
+<button class="play-again" onclick="start()">Start</button>
+</div>`);
+function start() {
+    $('#start').addClass("hidden");
+    $('body').html(content[0]);
+    $('.button')[2].disabled = true;
+}
 let dem = 1;
-$('body').html(content[0]);
 // chức năng của nút next
 function next() {
-    let currentQ = content[dem];
-    $('body').html(currentQ);
+    $('body').html(content[dem]);
     dem++;
+    $('.button')[2].disabled = true;
     if (dem === content.length) {
         $($('.button')[2]).html('Kết thúc');
     }
     else if (dem > content.length) {
         $('body').html(`<div id="end-game">
        <h1>Game Over</h1>
+       <p>Bạn đúng được ${dem - 1} câu</p>
+       <button class="play-again" onclick="exit()">Chơi lại</button>
    </div>`);
     }
 }
-
+// nút exit
 function exit() {
     location.reload();
 }
 
+// thay đổi màu nền lựa chọn
+let temp = "";
 function choice(input) {
+    let a = document.getElementById('A');
+    let b = document.getElementById('B');
+    let c = document.getElementById('C');
+    let d = document.getElementById('D');
+    if (input == 'a') {
+        a.style.backgroundColor = '#dbac4b';
+        a.style.color = 'white';
+        temp = a.innerText;
+        b.style.backgroundColor = '#2359b6';
+        b.style.color = 'rgb(255, 232, 98)';
+        c.style.backgroundColor = '#2359b6';
+        c.style.color = 'rgb(255, 232, 98)';
+        d.style.backgroundColor = '#2359b6';
+        d.style.color = 'rgb(255, 232, 98)';
     }
-    if (input === 'a') {
-        return 1;
-    } 
-    else if (input === 'b') {
-        return 2;
+    else if (input == 'b') {
+        b.style.backgroundColor = '#dbac4b';
+        b.style.color = 'white';
+        temp = b.innerText;
+        a.style.backgroundColor = '#2359b6';
+        a.style.color = 'rgb(255, 232, 98)';
+        c.style.backgroundColor = '#2359b6';
+        c.style.color = 'rgb(255, 232, 98)';
+        d.style.backgroundColor = '#2359b6';
+        d.style.color = 'rgb(255, 232, 98)';
     }
-    else if (input === 'c') {
-        return 3;
+    else if (input == 'c') {
+        c.style.backgroundColor = '#dbac4b';
+        c.style.color = 'white';
+        temp = c.innerText;
+        a.style.backgroundColor = '#2359b6';
+        a.style.color = 'rgb(255, 232, 98)';
+        b.style.backgroundColor = '#2359b6';
+        b.style.color = 'rgb(255, 232, 98)';
+        d.style.backgroundColor = '#2359b6';
+        d.style.color = 'rgb(255, 232, 98)';
     }
-    else if (input === 'd') {
-        return 4;
+    else if (input == 'd') {
+        d.style.backgroundColor = '#dbac4b';
+        d.style.color = 'white';
+        temp = d.innerText;
+        a.style.backgroundColor = '#2359b6';
+        a.style.color = 'rgb(255, 232, 98)';
+        b.style.backgroundColor = '#2359b6';
+        b.style.color = 'rgb(255, 232, 98)';
+        c.style.backgroundColor = '#2359b6';
+        c.style.color = 'rgb(255, 232, 98)';
     }
 }
 
+// chức năng nút xác nhận, kiểm tra câu trả lời và show đáp án đúng
 function confirm() {
+    let a = document.getElementById('A');
+    let b = document.getElementById('B');
+    let c = document.getElementById('C');
+    let d = document.getElementById('D');
+    if (data[dem - 1].answerA == data[dem - 1].answer) {
+        a.style.animation = 'nhap-nhay 0.3s linear infinite';
+    }
+    else if (data[dem - 1].answerB == data[dem - 1].answer) {
+        b.style.animation = 'nhap-nhay 0.3s linear infinite';
+    }
+    else if (data[dem - 1].answerC == data[dem - 1].answer) {
+        c.style.animation = 'nhap-nhay 0.3s linear infinite';
+    }
+    else if (data[dem - 1].answerD == data[dem - 1].answer) {
+        d.style.animation = 'nhap-nhay 0.3s linear infinite';
+    }
+    if (temp == data[dem - 1].answer) {
+        $('.button')[2].disabled = false;
+    }
+    else {
+        setTimeout(function () {
+            $('body').html(`<div id="end-game">
+       <h1>Game Over</h1>
+       <p>Bạn đúng được ${dem - 1} câu</p>
+       <button class="play-again" onclick="exit()">Chơi lại</button>
+   </div>`);
+        }, 1800);
+    }
 }
+
+
 

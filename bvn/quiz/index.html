@@ -10,9 +10,15 @@
 </head>
 
 <body>
-    <div id="container">
+    <div id="start">
         <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/0/09/Vietnam_millionaire_2021.webp/1200px-Vietnam_millionaire_2021.webp.png"
             alt="anh logo">
+        <button class="play-again" onclick="start()">Start</button>
+    </div>
+    <div class="hidden"></div>
+    <div id="container">
+        <img src="http://streaming1.danviet.vn/upload/4-2018/images/2018-10-31/Tron-1-thang-gia-nhap-Facebook-MC-Lai-Van-Sam-noi-dieu-bat-ngo-sam6-1497289434848-1540981233-width660height396.jpg"
+            alt="anh nen">
         <div id="question">
             <div class="hai-ben">
                 <div class="tren"></div>
@@ -67,6 +73,8 @@
     <!-- man hinh ket thuc game -->
     <div id="end-game">
         <h1>Game Over</h1>
+        <p>Bạn đúng được ${dem-1} câu</p>
+        <button class="play-again" onclick="exit()">Chơi lại</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
