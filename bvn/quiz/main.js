@@ -1,8 +1,3 @@
-let a = document.getElementById('A');
-let b = document.getElementById('B');
-let c = document.getElementById('C');
-let d = document.getElementById('D');
-
 let data = [
     {
         question: "Miền Bắc của Việt Nam có tổng cộng bao nhiêu tỉnh thành?",
@@ -139,64 +134,64 @@ function exit() {
 let temp = "";
 function choice(input) {
     if (input == 'a') {
-        a.style.backgroundColor = '#dbac4b';
-        a.style.color = 'white';
-        temp = a.innerText;
-        b.style.backgroundColor = '#2359b6';
-        b.style.color = 'rgb(255, 232, 98)';
-        c.style.backgroundColor = '#2359b6';
-        c.style.color = 'rgb(255, 232, 98)';
-        d.style.backgroundColor = '#2359b6';
-        d.style.color = 'rgb(255, 232, 98)';
+        $('#A').css('background-color', '#dbac4b');
+        $('#A').css('color', 'white');
+        temp = $('#A').html();
+        $('#B').css('background-color', '#2359b6');
+        $('#B').css('color', 'rgb(255, 232, 98)');
+        $('#C').css('background-color', '#2359b6');
+        $('#C').css('color', 'rgb(255, 232, 98)');
+        $('#D').css('background-color', '#2359b6');
+        $('#C').css('color', 'rgb(255, 232, 98)');
     }
     else if (input == 'b') {
-        b.style.backgroundColor = '#dbac4b';
-        b.style.color = 'white';
-        temp = b.innerText;
-        a.style.backgroundColor = '#2359b6';
-        a.style.color = 'rgb(255, 232, 98)';
-        c.style.backgroundColor = '#2359b6';
-        c.style.color = 'rgb(255, 232, 98)';
-        d.style.backgroundColor = '#2359b6';
-        d.style.color = 'rgb(255, 232, 98)';
+        $('#B').css('background-color', '#dbac4b');
+        $('#B').css('color', 'white');
+        temp = $('#B').html();
+        $('#A').css('background-color', '#2359b6');
+        $('#A').css('color', 'rgb(255, 232, 98)');
+        $('#C').css('background-color', '#2359b6');
+        $('#C').css('color', 'rgb(255, 232, 98)');
+        $('#D').css('background-color', '#2359b6');
+        $('#C').css('color', 'rgb(255, 232, 98)');
     }
     else if (input == 'c') {
-        c.style.backgroundColor = '#dbac4b';
-        c.style.color = 'white';
-        temp = c.innerText;
-        a.style.backgroundColor = '#2359b6';
-        a.style.color = 'rgb(255, 232, 98)';
-        b.style.backgroundColor = '#2359b6';
-        b.style.color = 'rgb(255, 232, 98)';
-        d.style.backgroundColor = '#2359b6';
-        d.style.color = 'rgb(255, 232, 98)';
+        $('#C').css('background-color', '#dbac4b');
+        $('#C').css('color', 'white');
+        temp = $('#C').html();
+        $('#B').css('background-color', '#2359b6');
+        $('#B').css('color', 'rgb(255, 232, 98)');
+        $('#A').css('background-color', '#2359b6');
+        $('#A').css('color', 'rgb(255, 232, 98)');
+        $('#D').css('background-color', '#2359b6');
+        $('#C').css('color', 'rgb(255, 232, 98)');
     }
     else if (input == 'd') {
-        d.style.backgroundColor = '#dbac4b';
-        d.style.color = 'white';
-        temp = d.innerText;
-        a.style.backgroundColor = '#2359b6';
-        a.style.color = 'rgb(255, 232, 98)';
-        b.style.backgroundColor = '#2359b6';
-        b.style.color = 'rgb(255, 232, 98)';
-        c.style.backgroundColor = '#2359b6';
-        c.style.color = 'rgb(255, 232, 98)';
+        $('#D').css('background-color', '#dbac4b');
+        $('#D').css('color', 'white');
+        temp = $('#D').html();
+        $('#B').css('background-color', '#2359b6');
+        $('#B').css('color', 'rgb(255, 232, 98)');
+        $('#C').css('background-color', '#2359b6');
+        $('#C').css('color', 'rgb(255, 232, 98)');
+        $('#A').css('background-color', '#2359b6');
+        $('#A').css('color', 'rgb(255, 232, 98)');
     }
 }
 
 // chức năng nút xác nhận, kiểm tra câu trả lời và show đáp án đúng
 function confirm() {
     if (data[dem - 1].answerA == data[dem - 1].answer) {
-        a.style.animation = 'nhap-nhay 0.3s linear infinite';
+        $('#A').css('animation', 'nhap-nhay 0.3s linear infinite');
     }
     else if (data[dem - 1].answerB == data[dem - 1].answer) {
-        b.style.animation = 'nhap-nhay 0.3s linear infinite';
+        $('#B').css('animation', 'nhap-nhay 0.3s linear infinite');
     }
     else if (data[dem - 1].answerC == data[dem - 1].answer) {
-        c.style.animation = 'nhap-nhay 0.3s linear infinite';
+        $('#C').css('animation', 'nhap-nhay 0.3s linear infinite');
     }
     else if (data[dem - 1].answerD == data[dem - 1].answer) {
-        d.style.animation = 'nhap-nhay 0.3s linear infinite';
+        $('#D').css('animation', 'nhap-nhay 0.3s linear infinite');
     }
 
     // check câu trả lời
