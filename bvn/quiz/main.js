@@ -1,3 +1,8 @@
+let a = document.getElementById('A');
+let b = document.getElementById('B');
+let c = document.getElementById('C');
+let d = document.getElementById('D');
+
 let data = [
     {
         question: "Miền Bắc của Việt Nam có tổng cộng bao nhiêu tỉnh thành?",
@@ -91,18 +96,24 @@ for (let i = 0; i < data.length; i++) {
     </div>
 </div>`);
 }
-$('body').html(`<div id="start">
-<img src="https://upload.wikimedia.org/wikipedia/vi/thumb/0/09/Vietnam_millionaire_2021.webp/1200px-Vietnam_millionaire_2021.webp.png"
+
+// màn hình lúc đầu của web
+$('body').html(`
+<div id="start">
+    <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/0/09/Vietnam_millionaire_2021.webp/1200px-Vietnam_millionaire_2021.webp.png"
     alt="anh logo">
-<button class="play-again" onclick="start()">Start</button>
+    <button class="play-again" onclick="start()">Start</button>
 </div>`);
+
+// chức năng nút start và màn hình bắt đầu
 function start() {
     $('#start').addClass("hidden");
     $('body').html(content[0]);
     $('.button')[2].disabled = true;
 }
-let dem = 1;
+
 // chức năng của nút next
+let dem = 1;
 function next() {
     $('body').html(content[dem]);
     dem++;
@@ -111,11 +122,12 @@ function next() {
         $($('.button')[2]).html('Kết thúc');
     }
     else if (dem > content.length) {
-        $('body').html(`<div id="end-game">
-       <h1>Game Over</h1>
-       <p>Bạn đúng được ${dem - 1} câu</p>
-       <button class="play-again" onclick="exit()">Chơi lại</button>
-   </div>`);
+        $('body').html(`
+        <div id="end-game">
+            <h1>Game Over</h1>
+            <p>Bạn đúng được ${dem - 1} câu</p>
+            <button class="play-again" onclick="exit()">Chơi lại</button>
+        </div>`);
     }
 }
 // nút exit
@@ -123,13 +135,9 @@ function exit() {
     location.reload();
 }
 
-// thay đổi màu nền lựa chọn
+// thay đổi màu nền của câu nguòi chơi lựa chọn và lưu lựa chọn vào biến phụ
 let temp = "";
 function choice(input) {
-    let a = document.getElementById('A');
-    let b = document.getElementById('B');
-    let c = document.getElementById('C');
-    let d = document.getElementById('D');
     if (input == 'a') {
         a.style.backgroundColor = '#dbac4b';
         a.style.color = 'white';
@@ -178,10 +186,6 @@ function choice(input) {
 
 // chức năng nút xác nhận, kiểm tra câu trả lời và show đáp án đúng
 function confirm() {
-    let a = document.getElementById('A');
-    let b = document.getElementById('B');
-    let c = document.getElementById('C');
-    let d = document.getElementById('D');
     if (data[dem - 1].answerA == data[dem - 1].answer) {
         a.style.animation = 'nhap-nhay 0.3s linear infinite';
     }
@@ -194,16 +198,19 @@ function confirm() {
     else if (data[dem - 1].answerD == data[dem - 1].answer) {
         d.style.animation = 'nhap-nhay 0.3s linear infinite';
     }
+
+    // check câu trả lời
     if (temp == data[dem - 1].answer) {
         $('.button')[2].disabled = false;
     }
     else {
         setTimeout(function () {
-            $('body').html(`<div id="end-game">
-       <h1>Game Over</h1>
-       <p>Bạn đúng được ${dem - 1} câu</p>
-       <button class="play-again" onclick="exit()">Chơi lại</button>
-   </div>`);
+            $('body').html(`
+            <div id="end-game">
+                <h1>Game Over</h1>
+                <p>Bạn đúng được ${dem - 1} câu</p>
+                <button class="play-again" onclick="exit()">Chơi lại</button>
+            </div>`);
         }, 1800);
     }
 }
