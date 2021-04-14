@@ -66,7 +66,10 @@
             padding: 0px 15px;
             display: none;
         }
-
+        #sub-menu.show{
+            display: block;
+        }
+        
         .sub-menu {
             text-align: center;
             background-color: blue;
@@ -86,7 +89,8 @@
             .icon {
                 display: block;
             }
-            .sub-menu{
+
+            .sub-menu {
                 display: block;
             }
         }
@@ -113,15 +117,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        let dem = 0;
-        function menu() {
-            let temp = dem;
-            document.getElementById("sub-menu").style.display = "flex";
-            document.getElementById("sub-menu").style.flexDirection = "column";
-            dem++;
-            if (temp % 2 !== 0) {
-                $('#sub-menu').hide();
-            }
+        function menu(){
+            $('#sub-menu').toggleClass('show');
         }
     </script>
 
