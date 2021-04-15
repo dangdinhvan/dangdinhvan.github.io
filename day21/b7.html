@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        #header {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        #menu {
+            display: flex;
+            color: white;
+        }
+
+        #logo {
+            width: 100px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: brown;
+        }
+
+        .item {
+            width: 110px;
+            height: 100%;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+        }
+
+        #hamberger {
+            display: flex;
+        }
+
+        #login {
+            width: 130px;
+            height: 23px;
+            background-color: firebrick;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content1 {
+            width: 70%;
+            height: 400px;
+            background-color: blue;
+            margin-right: 15px;
+        }
+
+        #content2 {
+            width: 30%;
+            height: 400px;
+            background-color: blue;
+        }
+
+        .icon {
+            font-size: 20px;
+            display: none;
+            margin-right: 10px;
+        }
+
+        .login-mobile {
+            display: none;
+            background-color: blue;
+        }
+
+        #menu.show {
+            display: flex;
+        }
+
+        @media(max-width:600px) {
+            .icon {
+                display: block;
+            }
+
+            #logo {
+                width: 80px;
+                height: 20px;
+            }
+
+            #header {
+                height: fit-content;
+                display: block;
+                flex-direction: column;
+                padding-bottom: 0px;
+            }
+
+            #login {
+                display: none;
+            }
+
+            #menu {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 15px;
+            }
+
+            .login-mobile {
+                width: 100%;
+                height: auto;
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: black;
+            }
+
+            .item {
+                width: 100%;
+                font-size: 20px;
+            }
+
+            #content {
+                display: block;
+            }
+
+            #content1 {
+                width: 100%;
+                margin: 0px 0px 15px 0px;
+            }
+
+            #content2 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="hamberger">
+            <i class="fas fa-bars icon icon" onclick="menu()"></i>
+            <div id="logo">Logo</div>
+        </div>
+        <div id="menu">
+            <div class="item">Menu 1</div>
+            <div class="item">Menu 2</div>
+            <div class="item">Menu 3</div>
+            <div class="login-mobile">Register</div>
+            <div class="login-mobile">Login</div>
+        </div>
+        <div id="login">Login / Register</div>
+    </div>
+    <div id="content">
+        <div id="content1"></div>
+        <div id="content2"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function menu() {
+            $('#menu').toggleClass('show');
+        }
+    </script>
+</body>
+
+</html>
