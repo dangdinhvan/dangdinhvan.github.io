@@ -1,0 +1,167 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.menu-bar-custom{
+    height: 54px;
+    background-color: #34465c !important;
+    box-shadow:  0px 1px 7px rgb(107, 107, 107);
+    padding: 0px 16px;
+}
+.container-fluid{
+    padding: 0px;
+}
+
+.img-logo{
+    width: 100px;
+}
+.nav-link{
+    color: white !important;
+    float: right;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    padding: 10px !important;
+    letter-spacing: 1px;
+}
+#navbarNavDropdown{
+    justify-content: flex-end;
+}
+.navbar-nav li:hover >a{
+    color: rgb(211, 207, 207) !important;
+}
+.dropdown-menu{
+    width: 202px;
+    border-radius: 3px;
+    margin: 0px;
+    padding: 0px;
+    top: 48px;
+    text-align: center;
+}
+.dropdown-menu li:hover >a{
+    background-color: rgb(175, 174, 174);
+    color: white !important;
+}
+.dropdown-item{
+    font-size: 15px;
+    padding: 11px 16px;
+    white-space: pre-wrap;
+}
+.icon{
+    font-size: 21px;
+    color: white;
+    margin: 0px 10px ;
+}
+.icon-login{
+    font-size: 30px;
+    color: white;
+    margin: 0px 7px 0px 15px ;
+}
+#body-content{
+    background-color: #f4f7fa;
+}
+.container-xxl{
+    padding: 48px 15px;
+    margin: 0px 50px;
+    display: flex;
+}
+#filter{
+    width: 178px;
+}
+#clear-filter{
+    width: 100%;
+    padding: 7px 13px;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border-width: 0px;
+    box-shadow: 0px 2px 4px grey;
+    margin-bottom: 24px;
+    display: none;
+}
+.filter-name{
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-check{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 17px;
+    color: rgb(94, 93, 93);
+}
+.radio{
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
+    border-color: rgb(184, 182, 182);
+    padding-bottom: 20px ;
+    margin-bottom: 30px;
+}
+.radio1{
+    padding-bottom: 20px ;
+    margin-bottom: 30px;
+}
+#cards{
+    margin: 0px 15px 0px 65px;
+}
+#input-search-course{
+    width: 305px;
+}
+#search-bar{
+    margin-bottom: 24px;
+}
+#cards-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem 2rem;
+}
+.card{
+    width: 305px;
+}
+.card-body{
+    padding: 16px 24px;
+}
+.card-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    height: 84px;
+}
+.new-price{
+    font-size: 20px;
+    color: orangered;
+}
+.old-price{
+    font-size: 20px;
+    color: gray;
+    text-decoration: line-through;
+    float: right;
+}
+.card img{
+    height: 213px;
+    overflow: hidden;
+}
+#footer{
+    background-color: #464646;
+    padding: 50px 0px;
+}
+.container{
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+}
+.information{
+    width: 23%;
+    list-style-type: none;
+    color: rgb(161, 158, 158);
+    font-size: 14px;
+}
+h4{
+    color: white;
+    font-size: 20px;
+}
