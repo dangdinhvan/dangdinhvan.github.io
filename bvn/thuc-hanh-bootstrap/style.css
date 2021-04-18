@@ -165,3 +165,52 @@ h4{
     color: white;
     font-size: 20px;
 }
+@media(max-width:600px){
+    #cards{
+        margin: 10px;
+    }
+    .container-xxl{
+        padding: 15px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #cards-content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 2rem;
+    }
+    #filter{
+        display: none;
+    }
+    #gio-hang{
+        display: none;
+    }
+    #icon-login{
+        display: none;
+    }
+    .menu-bar-custom{
+        width: 100%;
+        height: 62px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #space{
+        width: 56px;
+    }
+    .container{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .information{
+        width: 89%;
+        list-style-type: none;
+        color: rgb(161, 158, 158);
+        font-size: 14px;
+    }
+}
