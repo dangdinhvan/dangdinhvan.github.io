@@ -9,9 +9,6 @@
     box-shadow:  0px 1px 7px rgb(107, 107, 107);
     padding: 0px 16px;
 }
-.container-fluid{
-    padding: 0px;
-}
 
 .img-logo{
     width: 100px;
@@ -62,8 +59,7 @@
     background-color: #f4f7fa;
 }
 .container-xxl{
-    padding: 48px 15px;
-    margin: 0px 50px;
+    padding: 48px 45px;
     display: flex;
 }
 #filter{
@@ -107,21 +103,21 @@
     margin-bottom: 30px;
 }
 #cards{
-    margin: 0px 15px 0px 65px;
+    margin: 0px 0px 0px 60px;
 }
 #input-search-course{
     width: 305px;
 }
 #search-bar{
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
-#cards-content{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 2rem 2rem;
+.row{
+    width: 74vw;
 }
 .card{
     width: 305px;
+    padding: 0px;
+    margin: 15px;
 }
 .card-body{
     padding: 16px 24px;
@@ -164,6 +160,10 @@
 h4{
     color: white;
     font-size: 20px;
+    margin-bottom: 2px;
+}
+.navbar-toggler{
+   background-color: rgb(224, 222, 222);
 }
 @media(max-width:600px){
     #cards{
@@ -175,11 +175,6 @@ h4{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    #cards-content{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 2rem;
     }
     #filter{
         display: none;
@@ -203,14 +198,21 @@ h4{
         max-width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 10px;
     }
     .information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 89%;
         list-style-type: none;
         color: rgb(161, 158, 158);
         font-size: 14px;
+        margin-bottom: 17px;
+    }
+    .information p{
+        text-align: center;
     }
 }
