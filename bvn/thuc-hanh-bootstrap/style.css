@@ -139,7 +139,7 @@
     float: right;
 }
 .card img{
-    height: 213px;
+    height: 100%;
     overflow: hidden;
 }
 #footer{
