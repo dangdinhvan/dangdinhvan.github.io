@@ -105,19 +105,15 @@
 #cards{
     margin: 0px 0px 0px 60px;
 }
-#input-search-course{
-    width: 305px;
-}
+
 #search-bar{
     margin-bottom: 10px;
 }
-.row{
-    width: 74vw;
-}
 .card{
-    width: 305px;
-    padding: 0px;
-    margin: 15px;
+    height: 377px;
+}
+.row{
+   max-width: 74vw;
 }
 .card-body{
     padding: 16px 24px;
