@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dream Cars</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <style>
         * {
             padding: 0px;
@@ -15,16 +20,14 @@
         }
 
         #header {
-            width: 100%;
+            max-width: 1440px;
             height: 790px;
-        }
-
-        #background {
-            width: 100%;
-            height: 612px;
+            background-image: url(../anh/Rectangle.jpg);
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 35px;
         }
 
         #img-bg {
@@ -34,22 +37,15 @@
         }
 
         #menu {
-            width: 90%;
+            width: 100%;
             height: 44px;
-            position: absolute;
-            top: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
-            padding: 0px 10px;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-            font-size: 3rem;
+            padding: 0px 48px;
+            margin-top: 40px;
         }
 
         #items {
@@ -69,68 +65,246 @@
             display: flex;
             align-items: center;
             padding: 0px 15px;
-            color: black;
+            color: gray;
         }
 
         #banner {
             max-width: 680px;
-            height: 579px;
-            position: absolute;
-            top: 150px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+            margin: auto;
+            margin-top: 128px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 54px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 1.12px;
+            margin-bottom: 10px;
         }
 
         #banner p {
+            max-width: 617px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 1rem;
+            font-size: 20px;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 0px 10px;
+            margin: auto;
+            line-height: 1.5;
+            margin-bottom: 15px;
         }
 
-        #search {
-            max-width: 100%;
+        .search {
+            max-width: 591px;
+            height: 56px;
+            margin: auto;
+            margin-bottom: 25px;
+            display: flex;
         }
 
         #banner img {
-            max-width: 90%;
+            max-width: 100%;
         }
 
         .icon {
             display: none;
             font-size: 20px;
         }
-        #search{
-            width: 95%;
+
+        #input1 {
+            width: 50%;
+            padding: 0px 20px;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+            border-color: rgb(226, 226, 226);
+            border-width: 1px;
+            outline: grey;
+        }
+
+        #input2 {
+            width: 25%;
+            padding: 0px 20px;
+            border-style: none;
+            outline: grey;
+        }
+
+        .confirm {
+            width: 25%;
+            background-color: #defe08;
+            border-style: none;
+            color: gray;
+        }
+
+        #content1 {
+            max-width: 1440px;
+            padding: 0px 75px;
+            min-height: 763px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 84px;
+        }
+
+        #title-content1 {
+            max-width: 506px;
+            height: 87px;
+        }
+
+        h2 {
+            width: 350px;
+            margin: auto;
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        #title-content1 p {
+            max-width: 506px;
+            font-size: 20px;
+            color: grey;
+            text-align: center;
+        }
+
+        #more-deal {
+            width: 228px;
+            height: 60px;
+            margin-top: 48px;
+            color: white;
+            background-color: #efa621;
+            border: none;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px 10px;
+        }
+
+        .row {
+            max-width: 1277px;
+        }
+
+        .car {
+            max-width: 299px;
+            position: relative;
+        }
+
+        .price-tag {
+            max-width: 100%;
+            position: absolute;
+            top: 26px;
+            left: 220px;
+        }
+
+        .car-img {
+            max-width: 100%;
+        }
+
+        .car p {
+            width: 60px;
+            position: absolute;
+            top: 32px;
+            left: 240px;
+            margin: 0px;
+            font-weight: 600;
+            color: white;
+        }
+
+        #content2 {
+            max-width: 1256px;
+            min-height: 447px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            margin-bottom: 82px;
+        }
+
+        .tip-img {
+            max-width: 100%;
+        }
+
+        #content3 {
+            max-width: 1440px;
+            min-height: 348px;
+            background-image: url(./img/footer.jpg);
+            padding-top: 70px;
+        }
+
+        #input-email {
+            width: 75%;
+            padding: 0px 20px;
+            border-style: none;
+            outline: grey;
+        }
+
+        h3 {
+            color: white;
+            font-size: 40px;
+            margin: auto;
+            max-width: 454px;
+            text-align: center;
+            margin-bottom: 11px;
+        }
+
+        .enter-email {
+            display: flex;
+            max-width: 591px;
+            height: 55px;
+            margin: auto;
+        }
+
+        #content3 p {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+            margin: auto;
+            max-width: 528px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #footer {
+            max-width: 1440px;
+            height: 98px;
+            background-color: #342c2c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 0px 84px;
+        }
+
+        #items.show {
             display: flex;
         }
-        #input1{
-            width: 50%;
-            height: 50px;
-            padding: 10px;
-        }
-        #input2{
-            width: 20%;
-            height: 50px;
-            padding: 10px;
-        }
+
         @media(max-width:600px) {
             .icon {
                 display: block;
             }
-            #header{
-                height: 300px;
+
+            #header {
+                height: 470px;
             }
-            #background{
-                height: 270px;
+            #logo{
+                font-size: 20px;
             }
             #items {
                 display: none;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 15px;
+                font-size: 18px;
             }
-
+            .sign-up{
+                background-color: #f5d103;
+                color: white;
+            }
             #logo {
                 margin: auto;
             }
@@ -139,10 +313,84 @@
                 width: 100%;
                 height: 220px;
                 padding: 15px;
-                top: 50px;
+                margin-top: 20px;
             }
-            h1{
-                font-size: 2rem;
+
+            #menu {
+                margin-top: 20px;
+                padding: 0px 20px;
+                flex-direction: column;
+            }
+            #hamberger{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 20px auto 20px;
+                justify-content: space-between;
+            }
+            h1 {
+                font-size: 30px;
+            }
+
+            #banner p {
+                font-size: 18px;
+            }
+
+            #input1 {
+                font-size: 15px;
+                padding: 5px;
+            }
+
+            #input2 {
+                font-size: 15px;
+                padding: 5px;
+            }
+
+            .confirm {
+                font-size: 15px;
+                padding: 5px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            #title-content1 p {
+                font-size: 15px;
+            }
+
+            #content1 {
+                padding: 0px 20px 0px 50px;
+                margin-bottom: 40px;
+            }
+
+            #more-deal {
+                margin-top: 20px;
+            }
+
+            #content2 {
+                padding: 0px 20px;
+                margin-bottom: 40px;
+            }
+
+            h3 {
+                font-size: 25px;
+            }
+
+            #content3 p {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            #footer {
+                padding: 0px 20px;
+            }
+
+            .enter-email {
+                display: flex;
+                max-width: 500px;
+                height: 50px;
+                margin: auto;
+                padding: 0px 20px;
             }
         }
     </style>
@@ -150,32 +398,138 @@
 
 <body>
     <div id="header">
-        <div id="background">
-            <img id="img-bg" src="../anh/Rectangle.jpg" alt="background">
-            <div id="menu">
-                <i class="fas fa-bars icon"></i>
+        <div id="menu">
+            <div id="hamberger">
+                <i class="fas fa-bars icon" onclick="showmenu()"></i>
                 <div id="logo" style="font-weight: 600;">DreamCars</div>
-                <div id="items">
-                    <div class="item">Search Cars</div>
-                    <div class="item">Buyer Tips</div>
-                    <div class="item">Finance</div>
-                    <div class="item">Sign In</div>
-                    <div class="sign-up">Sign Up</div>
-                </div>
             </div>
-            <div id="banner">
-                <h1>Find Your Dream Car</h1>
-                <p>Search over 20,000 pre-approved used cars and find your perfect vehicle today</p>
-                <div id="search">
-                    <input id="input1" type="text" placeholder="Search make or model">
-                    <input id="input1" type="text" placeholder="Post code">
-                    <button>Find My Car</button>
-                </div>
-                <img src="../anh/Mercedes-Benz-PNG-Transparent.png" alt="anh mercedes">
+            <div id="items">
+                <div class="item">Search Cars</div>
+                <div class="item">Buyer Tips</div>
+                <div class="item">Finance</div>
+                <div class="item">Sign In</div>
+                <div class="sign-up">Sign Up</div>
             </div>
         </div>
-
+        <div id="banner">
+            <h1>Find Your Dream Car</h1>
+            <p>Search over 20,000 pre-approved used cars and find your perfect vehicle today</p>
+            <div class="search">
+                <input id="input1" type="text" placeholder="Search make or model">
+                <input id="input2" type="text" placeholder="Post code">
+                <button class="confirm">Find My Car</button>
+            </div>
+            <img src="../anh/Mercedes-Benz-PNG-Transparent.png" alt="anh mercedes">
+        </div>
     </div>
+    <div id="content1">
+        <div id="title-content1">
+            <h2>Today’s Hottests Deals</h2>
+            <p>Check out the most popular cars in stock today</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/ford-focus.png" alt="ford-focus">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 7,599</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/skoda.png" alt="skoda-fabiza">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 6,500</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/honda-civic.png" alt="honda-civic">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 10,400</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/vauxhall.png" alt="Vauxhall Corsa">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 3,999</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/renault.png" alt="Renault Clio">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 4,999</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/v-polo.png" alt="Volkswagen Polo">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 1,999</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/seat-ibiza.png" alt="seat-ibiza">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 6,850</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="car">
+                    <img class="car-img" src="./img/bmw-i5.png" alt="BMW i5">
+                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                    <p>&pound; 8,950</p>
+                </div>
+            </div>
+        </div>
+        <button id="more-deal">VIEW ALL TODAY'S DEALS</button>
+    </div>
+    <div id="content2">
+        <div id="title-content1">
+            <h2>Today’s Hottests Deals</h2>
+            <p>Check out the most popular cars in stock today</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <img class="tip-img" src="./img/tip-1.jpg" alt="tip-1">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <img class="tip-img" src="./img/tip-2.jpg" alt="tip-2">
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <img class="tip-img" src="./img/tip-3.jpg" alt="tip-3">
+            </div>
+        </div>
+        <button id="more-deal">SEE ALL OUR GUIDES</button>
+    </div>
+    <div id="content3">
+        <h3>Never Miss A Message</h3>
+        <p>Join our exclusive list for one off deals and more</p>
+        <div class="enter-email">
+            <input id="input-email" type="text" placeholder="Enter your email address..">
+            <button class="confirm">Sign Me Up</button>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="logo" style="font-weight: 600;">DreamCars</div>
+        <div id="items">
+            <div class="item">Search Cars</div>
+            <div class="item">Buyer Tips</div>
+            <div class="item">Finance</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function showmenu() {
+            $('#items').toggleClass('show');
+        }
+    </script>
 </body>
 
 </html>
