@@ -271,7 +271,6 @@ h2 {
     filter: drop-shadow(0px 10px 21px rgba(0, 0, 0, 0.185547));
     display: flex;
     justify-content: space-between;
-    background-color: red;
 }
 
 .member-img {
