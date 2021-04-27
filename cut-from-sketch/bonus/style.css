@@ -802,6 +802,7 @@ h4 {
         align-items: center;
     }
     .member {
+        width: 80%;
         margin-bottom: 50px;
     }
     .member-btn {
