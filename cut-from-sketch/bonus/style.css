@@ -863,13 +863,6 @@ h4 {
     #team {
         margin: 0px auto 100px auto;
     }
-    .members {
-        flex-direction: column;
-        align-items: center;
-    }
-    .member {
-        width: 100%;
-    }
     .steps-le {
         margin-bottom: 30px;
     }
@@ -907,6 +900,12 @@ h4 {
     }
     #apply {
         padding: 20px;
+    }
+    .member{
+        width: 95%;
+    }
+    .member-btn{
+        width: 200px;
     }
     .link-col a {
         display: none;
