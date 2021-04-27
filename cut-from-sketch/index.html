@@ -19,6 +19,10 @@
             box-sizing: border-box;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         #header {
             max-width: 1440px;
             height: 790px;
@@ -48,6 +52,10 @@
             margin-top: 40px;
         }
 
+        #logo {
+            font-size: 25px;
+        }
+
         #items {
             height: 100%;
             display: flex;
@@ -57,6 +65,11 @@
 
         .item {
             margin: 0px 20px;
+            color: black;
+        }
+
+        .item:hover {
+            color: white;
         }
 
         .sign-up {
@@ -66,6 +79,10 @@
             align-items: center;
             padding: 0px 15px;
             color: gray;
+        }
+
+        .sign-up:hover {
+            color: white;
         }
 
         #banner {
@@ -139,6 +156,10 @@
             color: gray;
         }
 
+        .confirm:hover {
+            background-color: rgb(175, 247, 94);
+        }
+
         #content1 {
             max-width: 1440px;
             padding: 0px 75px;
@@ -190,13 +211,15 @@
         .car {
             max-width: 299px;
             position: relative;
+            margin: auto;
+            margin-bottom: 20px;
         }
 
         .price-tag {
             max-width: 100%;
             position: absolute;
             top: 26px;
-            left: 220px;
+            right: -7px;
         }
 
         .car-img {
@@ -204,11 +227,11 @@
         }
 
         .car p {
-            width: 60px;
+            width: 70px;
             position: absolute;
             top: 32px;
-            left: 240px;
-            margin: 0px;
+            right: -5px;
+            margin: 0;
             font-weight: 600;
             color: white;
         }
@@ -225,14 +248,14 @@
         }
 
         .tip-img {
-            max-width: 100%;
+            width: 100%;
+            padding: 15px 20px;
         }
 
         #content3 {
             max-width: 1440px;
-            min-height: 348px;
             background-image: url(./img/footer.jpg);
-            padding-top: 70px;
+            padding: 70px 0px 70px 0px;
         }
 
         #input-email {
@@ -281,30 +304,54 @@
 
         #items.show {
             display: flex;
+            z-index: 1;
         }
 
+        /* =================================================== */
+        /* man hinh sm */
         @media(max-width:600px) {
             .icon {
-                display: block;
+                display: flex;
+                align-items: center;
             }
 
             #header {
                 height: 470px;
+                margin-bottom: 100px;
             }
-            #logo{
+
+            #logo {
                 font-size: 20px;
             }
+
             #items {
+                width: 60%;
                 display: none;
                 flex-direction: column;
                 align-items: center;
                 margin-top: 15px;
                 font-size: 18px;
             }
-            .sign-up{
-                background-color: #f5d103;
-                color: white;
+
+            .item {
+                width: 100%;
+                text-align: center;
+                background-color: honeydew;
+                color: grey;
+                height: 100%;
+                padding: 10px 0px;
             }
+
+            .sign-up {
+                background-color: honeydew;
+                color: grey;
+                width: 100%;
+                text-align: center;
+                display: block;
+                height: 100%;
+                padding: 10px 0px;
+            }
+
             #logo {
                 margin: auto;
             }
@@ -321,12 +368,14 @@
                 padding: 0px 20px;
                 flex-direction: column;
             }
-            #hamberger{
+
+            #hamberger {
                 width: 100%;
                 display: grid;
                 grid-template-columns: 20px auto 20px;
                 justify-content: space-between;
             }
+
             h1 {
                 font-size: 30px;
             }
@@ -365,15 +414,19 @@
 
             #more-deal {
                 margin-top: 20px;
+                font-family: Arial, Helvetica, sans-serif;
             }
 
             #content2 {
-                padding: 0px 20px;
                 margin-bottom: 40px;
             }
 
             h3 {
                 font-size: 25px;
+            }
+
+            #content3 {
+                padding: 30px 0px;
             }
 
             #content3 p {
@@ -391,136 +444,141 @@
                 height: 50px;
                 margin: auto;
                 padding: 0px 20px;
+                margin-bottom: 30px;
             }
         }
+
+        /* =================================================== */
     </style>
 </head>
 
 <body>
-    <div id="header">
-        <div id="menu">
-            <div id="hamberger">
-                <i class="fas fa-bars icon" onclick="showmenu()"></i>
-                <div id="logo" style="font-weight: 600;">DreamCars</div>
+    <div class='container-fluid' style="padding: 0px;">
+        <div id="header">
+            <div id="menu">
+                <div id="hamberger">
+                    <i class="fas fa-bars icon" onclick="showmenu()"></i>
+                    <div id="logo" style="font-weight: 600;">DreamCars</div>
+                </div>
+                <div id="items">
+                    <a href="#" class="item">Search Cars</a>
+                    <a href="#" class="item">Buyer Tips</a>
+                    <a href="#" class="item">Finance</a>
+                    <a href="#" class="item">Sign In</a>
+                    <a href="#" class="sign-up">Sign Up</a>
+                </div>
             </div>
+            <div id="banner">
+                <h1>Find Your Dream Car</h1>
+                <p>Search over 20,000 pre-approved used cars and find your perfect vehicle today</p>
+                <div class="search">
+                    <input id="input1" type="text" placeholder="Search make or model">
+                    <input id="input2" type="text" placeholder="Post code">
+                    <button class="confirm">Find My Car</button>
+                </div>
+                <img src="../anh/Mercedes-Benz-PNG-Transparent.png" alt="anh mercedes">
+            </div>
+        </div>
+        <div id="content1">
+            <div id="title-content1">
+                <h2>Today’s Hottests Deals</h2>
+                <p>Check out the most popular cars in stock today</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/ford-focus.png" alt="ford-focus">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 7,599</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/skoda.png" alt="skoda-fabiza">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 6,500</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/honda-civic.png" alt="honda-civic">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 10,400</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/vauxhall.png" alt="Vauxhall Corsa">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 3,999</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/renault.png" alt="Renault Clio">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 4,999</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/v-polo.png" alt="Volkswagen Polo">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 1,999</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/seat-ibiza.png" alt="seat-ibiza">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 6,850</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="car">
+                        <img class="car-img" src="./img/bmw-i5.png" alt="BMW i5">
+                        <img class="price-tag" src="./img/price tag.png" alt="price-tag">
+                        <p>&pound; 8,950</p>
+                    </div>
+                </div>
+            </div>
+            <button id="more-deal">VIEW ALL TODAY'S DEALS</button>
+        </div>
+        <div id="content2">
+            <div id="title-content1">
+                <h2>Today’s Hottests Deals</h2>
+                <p>Check out the most popular cars in stock today</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="tip-img" src="./img/tip-1.jpg" alt="tip-1">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="tip-img" src="./img/tip-2.jpg" alt="tip-2">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="tip-img" src="./img/tip-3.jpg" alt="tip-3">
+                </div>
+            </div>
+            <button id="more-deal">SEE ALL OUR GUIDES</button>
+        </div>
+        <div id="content3">
+            <h3>Never Miss A Message</h3>
+            <p>Join our exclusive list for one off deals and more</p>
+            <div class="enter-email">
+                <input id="input-email" type="text" placeholder="Enter your email address..">
+                <button class="confirm">Sign Me Up</button>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="logo" style="font-weight: 600;">DreamCars</div>
             <div id="items">
-                <div class="item">Search Cars</div>
-                <div class="item">Buyer Tips</div>
-                <div class="item">Finance</div>
-                <div class="item">Sign In</div>
-                <div class="sign-up">Sign Up</div>
+                <a href="#" class="item" style="color: white;">Search Cars</a>
+                <a href="#" class="item" style="color: white;">Buyer Tips</a>
+                <a href="#" class="item" style="color: white;">Finance</a>
             </div>
-        </div>
-        <div id="banner">
-            <h1>Find Your Dream Car</h1>
-            <p>Search over 20,000 pre-approved used cars and find your perfect vehicle today</p>
-            <div class="search">
-                <input id="input1" type="text" placeholder="Search make or model">
-                <input id="input2" type="text" placeholder="Post code">
-                <button class="confirm">Find My Car</button>
-            </div>
-            <img src="../anh/Mercedes-Benz-PNG-Transparent.png" alt="anh mercedes">
-        </div>
-    </div>
-    <div id="content1">
-        <div id="title-content1">
-            <h2>Today’s Hottests Deals</h2>
-            <p>Check out the most popular cars in stock today</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/ford-focus.png" alt="ford-focus">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 7,599</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/skoda.png" alt="skoda-fabiza">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 6,500</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/honda-civic.png" alt="honda-civic">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 10,400</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/vauxhall.png" alt="Vauxhall Corsa">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 3,999</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/renault.png" alt="Renault Clio">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 4,999</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/v-polo.png" alt="Volkswagen Polo">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 1,999</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/seat-ibiza.png" alt="seat-ibiza">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 6,850</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="car">
-                    <img class="car-img" src="./img/bmw-i5.png" alt="BMW i5">
-                    <img class="price-tag" src="./img/price tag.png" alt="price-tag">
-                    <p>&pound; 8,950</p>
-                </div>
-            </div>
-        </div>
-        <button id="more-deal">VIEW ALL TODAY'S DEALS</button>
-    </div>
-    <div id="content2">
-        <div id="title-content1">
-            <h2>Today’s Hottests Deals</h2>
-            <p>Check out the most popular cars in stock today</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <img class="tip-img" src="./img/tip-1.jpg" alt="tip-1">
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <img class="tip-img" src="./img/tip-2.jpg" alt="tip-2">
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <img class="tip-img" src="./img/tip-3.jpg" alt="tip-3">
-            </div>
-        </div>
-        <button id="more-deal">SEE ALL OUR GUIDES</button>
-    </div>
-    <div id="content3">
-        <h3>Never Miss A Message</h3>
-        <p>Join our exclusive list for one off deals and more</p>
-        <div class="enter-email">
-            <input id="input-email" type="text" placeholder="Enter your email address..">
-            <button class="confirm">Sign Me Up</button>
-        </div>
-    </div>
-    <div id="footer">
-        <div id="logo" style="font-weight: 600;">DreamCars</div>
-        <div id="items">
-            <div class="item">Search Cars</div>
-            <div class="item">Buyer Tips</div>
-            <div class="item">Finance</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
