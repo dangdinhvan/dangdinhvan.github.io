@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Accordion</title>
+    <style>
+        body {
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        #container {
+            width: 550px;
+            margin: 50px 0px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: lavender;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+
+        .accordion-button {
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+            background-clip: padding-box;
+        }
+
+        .btn1 {
+            border-style: solid;
+            border-width: 1px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-color: lavender;
+        }
+
+        .btn2 {
+            border-style: solid;
+            border-width: 1px;
+            border-left: none;
+            border-right: none;
+            border-color: lavender;
+        }
+
+        .btn3 {
+            border-style: solid;
+            border-width: 1px;
+            border-left: none;
+            border-right: none;
+            border-color: lavender;
+        }
+
+        .accordion-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+            transition: transform 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="accordion-item">
+            <h2 class="btn1">
+                <button class="accordion-button" onclick="show(this,'#content1')">Accordion item #1<i
+                        class="fas fa-angle-down icon1"></i></button>
+            </h2>
+            <div id="content1" class="accordion-content">
+                This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These classes control the overall appearance, as
+                well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that just about any HTML can go within the
+                .accordion-body, though the transition does limit overflow.
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="btn2">
+                <button class="accordion-button" onclick="show(this,'#content2')">Accordion item #2<i
+                        class="fas fa-angle-down icon2"></i></button>
+            </h2>
+            <div id="content2" class="accordion-content">
+                This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These classes control the overall appearance, as
+                well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that just about any HTML can go within the
+                .accordion-body, though the transition does limit overflow.
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="btn3">
+                <button class="accordion-button" onclick="show(this,'#content3')">Accordion item #3<i
+                        class="fas fa-angle-down icon3"></i></button>
+            </h2>
+            <div id="content3" class="accordion-content">
+                This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These classes control the overall appearance, as
+                well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that just about any HTML can go within the
+                .accordion-body, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function show(liElement, idContent) {
+            $(idContent).toggleClass('show');
+
+            if (idContent === '#content1') {
+                $('.icon1').toggleClass('rotate');
+                $('.icon2').removeClass('rotate');
+                $('.icon3').removeClass('rotate');
+                $('#content2').removeClass('show');
+                $('#content3').removeClass('show');
+            }
+            else if (idContent === '#content2') {
+                $('.icon2').toggleClass('rotate');
+                $('.icon1').removeClass('rotate');
+                $('.icon3').removeClass('rotate');
+                $('#content1').removeClass('show');
+                $('#content3').removeClass('show');
+            }
+            else {
+                $('.icon3').toggleClass('rotate');
+                $('.icon2').removeClass('rotate');
+                $('.icon1').removeClass('rotate');
+                $('#content2').removeClass('show');
+                $('#content1').removeClass('show');
+            }
+        }
+    </script>
+</body>
+
+</html>

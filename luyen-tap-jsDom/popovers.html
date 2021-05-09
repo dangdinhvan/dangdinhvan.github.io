@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #container {
+            width: 600px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .description {
+            width: 100px;
+            height: 60px;
+            background-color: whitesmoke;
+            border-style: solid;
+            border-width: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            display: none;
+        }
+        .show {
+            display: flex;
+        }
+
+        #toasts {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 150px; position: relative;">
+            <button class="btn" onclick="show('1')">button1</button>
+            <div class="description btn1">mo ta nut 1</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; width: 150px; position: relative;">
+            <button class="btn" onclick="show('2')">button2</button>
+            <div class="description btn2">mo ta nut 2</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; width: 150px; position: relative;">
+            <button class="btn" onclick="show('3')">button3</button>
+            <div class="description btn3">mo ta nut 3</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; width: 150px; position: relative;">
+            <button class="btn" onclick="show('4')">button4</button>
+            <div class="description btn4">mo ta nut 4</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function show(value) {
+           if(value==='1'){
+               $('.btn1').toggleClass('show');
+           }
+           else if(value==='2'){
+            $('.btn2').toggleClass('show');
+           }
+           else if(value==='3'){
+            $('.btn3').toggleClass('show');
+           }
+           else {
+            $('.btn4').toggleClass('show');
+           }
+        }
+    </script>
+</body>
+
+</html>
