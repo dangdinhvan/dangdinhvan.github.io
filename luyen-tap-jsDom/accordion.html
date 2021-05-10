@@ -80,7 +80,7 @@
 
         .rotate {
             transform: rotate(180deg);
-            transition: transform 1s;
+            transition: transform 0.5s;
         }
     </style>
 </head>
@@ -89,7 +89,7 @@
     <div id="container">
         <div class="accordion-item">
             <h2 class="btn1">
-                <button class="accordion-button" onclick="show(this,'#content1')">Accordion item #1<i
+                <button class="accordion-button" onclick="show('#content1')">Accordion item #1<i
                         class="fas fa-angle-down icon1"></i></button>
             </h2>
             <div id="content1" class="accordion-content">
@@ -102,7 +102,7 @@
         </div>
         <div class="accordion-item">
             <h2 class="btn2">
-                <button class="accordion-button" onclick="show(this,'#content2')">Accordion item #2<i
+                <button class="accordion-button" onclick="show('#content2')">Accordion item #2<i
                         class="fas fa-angle-down icon2"></i></button>
             </h2>
             <div id="content2" class="accordion-content">
@@ -115,7 +115,7 @@
         </div>
         <div class="accordion-item">
             <h2 class="btn3">
-                <button class="accordion-button" onclick="show(this,'#content3')">Accordion item #3<i
+                <button class="accordion-button" onclick="show('#content3')">Accordion item #3<i
                         class="fas fa-angle-down icon3"></i></button>
             </h2>
             <div id="content3" class="accordion-content">
@@ -130,7 +130,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        function show(liElement, idContent) {
+        function show(idContent) {
             $(idContent).toggleClass('show');
 
             if (idContent === '#content1') {
