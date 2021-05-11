@@ -12,6 +12,15 @@
         .progress {
             margin: 100px 0px;
         }
+        #buttons{
+            text-align: center;
+        }
+        .btn{
+            margin: 0px 10px;
+            border: none;
+            background-color: rgb(100, 100, 250);
+            color: white;
+        }
     </style>
 </head>
 
@@ -24,32 +33,55 @@
         </div>
         <div id="buttons">
             <button class="btn start-btn">Start</button>
-            <button class="btn pause-resume-btn">Pause / Resume</button>
+            <button class="btn pause-resume-btn">Pause</button>
             <button class="btn reset-btn">Reset</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        var phanTram = $('.progress-bar').width() / $('.progress').width() * 100;
-        $('.start-btn').click(function(){
-            var timer = setInterval(function () {
-                phanTram ++;
-                console.log(phanTram);
-                $('.progress-bar').width(phanTram + '%');
-            }, 1000);
+        let phanTram = 0;
+        let pause = false;
+        let timer;
+        $('.pause-resume-btn').addClass('disabled');
+        $('.reset-btn').addClass('disabled');
+        // hàm đếm phần trăm
+        function startProgress() {
+            phanTram++;
+            if (phanTram === 100) {
+                clearInterval(timer);
+            }
+            $('.progress-bar').width(phanTram + '%');
+            $('.progress-bar').text(phanTram + '%');
+        }
+        // hàm chức năng nút start
+        $('.start-btn').click(function () {
+            timer = setInterval(startProgress, 500);
+            $('.pause-resume-btn').removeClass('disabled');
+            $('.reset-btn').removeClass('disabled');
+            $('.start-btn').addClass('disabled');
         });
-        $('pause-resume-btn').click(function(){
-
+        // hàm chức năng nút pause/resume
+        $('.pause-resume-btn').click(function () {
+            pause = !pause;
+            if (pause === true) {
+                clearInterval(timer);
+                $('.pause-resume-btn').text('Resume');
+            }
+            else {
+                timer = setInterval(startProgress, 500);
+                $('.pause-resume-btn').text('Pause');
+            }
         });
-        $('.reset-btn').click(function(){
-            phanTram=0;
+        // hàm chức năng nút reset
+        $('.reset-btn').click(function () {
+            $('.progress-bar').width(0);
+            phanTram = 0;
             clearInterval(timer);
-            
+            $('.start-btn').removeClass('disabled');
+            $('.pause-resume-btn').addClass('disabled');
+            $('.reset-btn').addClass('disabled');
         });
-
-
-
     </script>
 </body>
 
