@@ -67,6 +67,7 @@
         let timer;
         $('.show-toasts-btn').click(function () {
             $('.toast').addClass('show');
+            clearTimeout(timer);
             timer = setTimeout(function () {
                 $('.toast').removeClass('show');
             }, 5000);

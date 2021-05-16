@@ -11,11 +11,11 @@ for(let i=0;i<names.length;i++){
 }
 
 for(let item of names){
-    console.log(item);// in ra cac phan tu
+    console.log(item); // in ra cac phan tu
 }
 
 for(let index in names){
-    console.log(index);//in index cua cac phan tu
+    console.log(index); //in index cua cac phan tu
 }
 
 //push de them moi 1 phan tu vao mang
