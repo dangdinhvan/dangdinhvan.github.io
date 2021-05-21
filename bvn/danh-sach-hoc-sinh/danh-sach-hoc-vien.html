@@ -23,6 +23,7 @@
 
         a {
             text-decoration: none;
+            cursor: pointer;
         }
 
         #them-hoc-vien {
@@ -30,6 +31,9 @@
             background-color: rgb(40, 202, 67);
             color: white;
             border-radius: 5px;
+        }
+        #them-hoc-vien:hover{
+            background-color: seagreen;
         }
 
         .table {
@@ -52,12 +56,17 @@
         }
 
         .edit-btn {
-            color: rgb(80, 192, 181);
+            color: rgb(81, 194, 183);
             margin-left: 100px;
         }
-
+        .edit-btn:hover{
+            color: rgb(63, 124, 114);
+        }
         .del-btn {
             color: rgb(255, 92, 92);
+        }
+        .del-btn:hover{
+            color: rgb(206, 49, 49);
         }
 
         .icon {
@@ -82,30 +91,10 @@
                 <td>...</td>
                 <td>...</td>
                 <td>...
-                    <button class="edit-btn"><i class="fas fa-edit icon"></i>Chỉnh sửa</button>
+                    <a class="edit-btn" href="./chinh-sua-hoc-vien.html"><i class="fas fa-edit icon"></i>Chỉnh sửa</a>
                     |
                     <button class="del-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                             class="fas fa-trash-alt icon"></i>Xóa</button>
-                </td>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...
-                    <button class="edit-btn"><i class="fas fa-edit icon"></i>Chỉnh sửa</button>
-                    |
-                    <button class="del-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt icon"></i>Xóa</button>
-                </td>
-            </tr>
-            <tr>
-                <td>...</td>
-                <td>...</td>
-                <td>...</td>
-                <td>...
-                    <button class="edit-btn"><i class="fas fa-edit icon"></i>Chỉnh sửa</button>
-                    |
-                    <button class="del-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash-alt icon"></i>Xóa</button>
                 </td>
             </tr>
         </table>
